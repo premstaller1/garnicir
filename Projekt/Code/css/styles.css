@@ -1,0 +1,121 @@
+/****** Allgemeine Settings *****/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Comfortaa', cursive;
+    color: #ffffff;
+}
+
+h3 {
+    font-family: 'Petit Formal Script', cursive;
+    color: white
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: 0px;
+    background-color: transparent;
+}
+
+/************************* RICHTIGER CODE ******************************************/
+
+
+/************************* Navigation Bereich *************************************/
+nav {
+    display: flex;
+    position: fixed;
+    padding: 10px 10%;
+    background-color: hsla(203, 10%, 74%, 0.384);
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+}
+
+.logo-nav-left {
+    margin: auto 0px;
+}
+
+.list-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.list-nav-right ul {
+    display: flex;
+    align-items: center;
+}
+
+.list-nav-right li {
+    padding: 21px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.list-nav-right button {
+    margin-left: 43px;
+    border: 3px solid white;
+    padding: 13px 21px;
+    border-radius: 6%;
+}
+
+.logo-nav-left a {
+    font-size: 35px;
+}
+
+header {
+    background-image: url(/Projekt/Ressourcen/IMG/wetransfer-615be1/valgardena.it.jpg);
+    height: 730px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.list-nav-right li:hover {
+    background-color: rgba(187, 187, 187, 0.473);
+}
+
+/**************************************** HERO BEREICH ****************************************/
+.hero-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.hero-text h3 {
+    font-size: 4.5rem;
+    padding: 35px;
+}
+
+.hero-text button {
+    border: 3px solid white;
+    border-radius: 5%;
+    padding: 15px 25px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.hero-text a {
+    color: white;
+}
