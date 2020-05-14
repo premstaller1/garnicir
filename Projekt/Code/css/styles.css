@@ -9,6 +9,12 @@
 body {
     font-family: 'Comfortaa', cursive;
     color: #b89f88;
+    background-image: url(/Projekt/Ressourcen/IMG/wetransfer-615be1/saiser.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 5000px;
 }
 
 h3 {
@@ -74,11 +80,11 @@ nav {
 
 header {
     background-image: url(/Projekt/Ressourcen/IMG/wetransfer-615be1/saiser.jpg);
-    height: 830px;
+    height: 730px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    background-attachment: fixed;
 }
 
 .list-nav-right li:hover {
@@ -147,11 +153,14 @@ header {
     background-color: #fff3db;
     transform: skewY(5deg);
     position: relative;
-    bottom: 170px;
+    bottom: 70px;
     height: 900px;
+    -webkit-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
+    -moz-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
+    box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
 }
 .about-us-container {
-    height: 730px;
+    height: 630px;
     margin: 0% 10%;
     transform: skewY(-5deg);
 }
@@ -159,12 +168,18 @@ header {
 .about-us-content {
     display: flex;
     width: 100%;
-    margin: 5% 0%;
+    margin: 3% 0%;
+}
+
+.about-us-content h3{
+    color: #b89f88;
+    font-size: 2rem;
 }
 
 .about-us-image {
-    width: 100%;
-    margin: 3% 30px 10% 0px;
+    max-width: 60%;
+    overflow: hidden;
+    padding-right: 3%;
 }
 
 .about-us-image div {
@@ -174,21 +189,40 @@ header {
 .about-us-image div img {
     max-width: 100%;
     height: auto;
+
 }
 
 .about-us-text {
-    width: 50%;
-    text-align: center;
-    margin: 3% 0px;
+    width: 40%;
+    text-align: left;
+    padding-left: 3%;
+    border-left: 2px solid rgba(128, 128, 128, 0.685);
 }
 
 .about-us-text p {
-    margin: 33px 0px;
+    padding: 30px 0px 0px 0px;
+
 }
 
-.about-us-container h3 {
+.about-us-header {
     text-align: center;
-    padding-top: 3%;
+    padding-top: 8%;
     font-size: 2rem;
     color: #b89f88;
+}
+
+/************************* Zimmer Bereich *************************************/
+.zimmer {
+    background-color: white;
+    height: 730px;
+    margin-top: 15%;
+    transform: skewY(5deg);
+}
+
+.zimmer-container {
+    transform: skewY(-5deg);
+    padding: 0 5%;
+    background-color: black;
+    width: 100%;
+    height: 50px;
 }
