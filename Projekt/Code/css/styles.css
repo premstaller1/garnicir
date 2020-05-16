@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
@@ -14,7 +15,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 5000px;
+
 }
 
 h3 {
@@ -55,7 +56,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    width: 80vw;
+    width: 100vw;
 }
 
 .logo-nav-left {
@@ -224,7 +225,7 @@ header {
 /************************* Zimmer Bereich *************************************/
 .zimmer {
     background-color: #fff3db;
-    height: 80vh;
+    height: 200vh;
     margin-top: 15%;
     transform: skewY(5deg);
     -webkit-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
@@ -253,41 +254,73 @@ header {
 }
 
 #zimmer-img {
-    max-width: 33.3333%;
+    max-width: 33.3334%;
     padding: 0px 1vw;
 }
 
 #zimmer-img div {
     max-width: 100%;
+    height: auto;
 }
 
 #zimmer-img div img {
     max-width: 100%;
-    width: 100%;
     height: auto;
-    overflow: hidden;
 }
 
 .zimmer-1-info::before {
     content: 'Dolomiti';
-    color: black;
+    color: #fff3db;
     font-size: 2vw;
     position: absolute;
-    bottom: 30%;
+    bottom: 37%;
     left: 15%;
     text-shadow: 2px 2px rgba(44, 44, 44, 0.425);
-    background-color: white;
 }
 
-.zimmer-1-info::after {
-    content: 'CHELLAXEN';
-    opacity: 0;
-    color: black;
+.zimmer-2-info::before {
+    content: 'Zimmer';
+    color: #fff3db;
     font-size: 2vw;
     position: absolute;
-    background-color: white;
-    top: 70%;
-    left: 13%;
-
+    bottom: 37%;
+    left: 45%;
+    text-shadow: 2px 2px rgba(44, 44, 44, 0.425);
 }
+
+
+.zimmer-3-info::before {
+    content: 'Frühstück';
+    color: #fff3db;
+    font-size: 2vw;
+    position: absolute;
+    bottom: 37%;
+    left: 75%;
+    text-shadow: 2px 2px rgba(44, 44, 44, 0.425);
+}
+
+/************************* Zimmer Bereich *************************************/
+
+
+
+.haus-info-container {
+    position: relative;
+    z-index: 2;
+    padding: 2% 0%;
+    margin: 5% 10%;
+    border: 0.2vw solid #b89f88ce;
+    transform: skewY(-5deg);
+}
+
+.haus-info-container h3{
+    color: #b89f88;
+    font-size: 2vw;
+    text-align: center;
+    padding-bottom: 1vh;
+}
+
+.haus-info-information {
+    padding: 4vh;
+}
+/* external css: flickity.css */
 
