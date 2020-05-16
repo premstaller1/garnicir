@@ -40,6 +40,9 @@ button {
     background-color: transparent;
 }
 
+p {
+    font-size: 1vw;
+}
 /************************* RICHTIGER CODE ******************************************/
 
 
@@ -47,12 +50,12 @@ button {
 nav {
     display: flex;
     position: fixed;
-    padding: 10px 10%;
+    padding: 0 10vw;
     background-color: #99755db7;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    width: 80%;
+    width: 80vw;
 }
 
 .logo-nav-left {
@@ -70,17 +73,18 @@ nav {
 }
 
 .list-nav-right li {
-    padding: 21px;
+    padding: 2vw;
     transition: background-color 250ms ease-in-out;
+    font-size: 1vw;
 }
 
 .logo-nav-left a {
-    font-size: 35px;
+    font-size: 2.5vw;
 }
 
 header {
     background-image: url(/Projekt/Ressourcen/IMG/wetransfer-615be1/saiser.jpg);
-    height: 730px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,15 +96,18 @@ header {
 }
 
 .list-nav-button button {
-    border: 3px solid #fff3db;
+    border: 0.2vw solid #fff3db;
     border-radius: 5%;
-    padding: 13px 21px;
-    font-size: 1.2rem;
+    padding: 0.8vw 1.8vw;
+    font-size: 1.2vw;
     cursor: pointer;
     color: #fff3db;
     transition-property: background-color;
     transition: all 200ms ease-in-out;
-    margin-left: 21px;
+}
+
+.button-nav-link {
+    margin-left: 2vw;
 }
 
 .list-nav-button button:hover {
@@ -110,25 +117,25 @@ header {
 .hero-bereich {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     align-content: center;
+    vertical-align: middle;
 }
 
-
 .hero-text h3 {
-    font-size: 4.5rem;
-    padding: 35px;
+    font-size: 4.5vw;
+    padding: 3.5vw;
     text-shadow: 2px 2px rgba(44, 44, 44, 0.425)
 }
 
 .hero-text button {
-    border: 3px solid #fff3db;
+    border: 0.2vw solid #fff3db;
     border-radius: 5%;
-    padding: 15px 25px;
-    font-size: 1.5rem;
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
     cursor: pointer;
     color: #fff3db;
     transition-property: background-color, text-shadow;
@@ -154,15 +161,19 @@ header {
     transform: skewY(5deg);
     position: relative;
     bottom: 70px;
-    height: 900px;
+    height: 120vh;
     -webkit-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
     -moz-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
     box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
 }
 .about-us-container {
-    height: 630px;
+    height: 90vh;
     margin: 0% 10%;
     transform: skewY(-5deg);
+}
+
+.about-us-container h3 {
+    font-size: 2vw;
 }
 
 .about-us-content {
@@ -173,7 +184,6 @@ header {
 
 .about-us-content h3{
     color: #b89f88;
-    font-size: 2rem;
 }
 
 .about-us-image {
@@ -184,12 +194,12 @@ header {
 
 .about-us-image div {
     max-width: 100%;
+    height: auto;
 }
 
 .about-us-image div img {
     max-width: 100%;
     height: auto;
-
 }
 
 .about-us-text {
@@ -213,16 +223,71 @@ header {
 
 /************************* Zimmer Bereich *************************************/
 .zimmer {
-    background-color: white;
-    height: 730px;
+    background-color: #fff3db;
+    height: 80vh;
     margin-top: 15%;
     transform: skewY(5deg);
+    -webkit-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
+    -moz-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
+    box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
 }
 
 .zimmer-container {
     transform: skewY(-5deg);
     padding: 0 5%;
-    background-color: black;
-    width: 100%;
-    height: 50px;
 }
+
+.zimmer-container h3 {
+    padding: 4% 0%;
+    text-align: center;
+    color: #b89f88;
+    font-size: 2vw;
+}
+
+.zimmer-container-img {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#zimmer-img {
+    max-width: 33.3333%;
+    padding: 0px 1vw;
+}
+
+#zimmer-img div {
+    max-width: 100%;
+}
+
+#zimmer-img div img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.zimmer-1-info::before {
+    content: 'Dolomiti';
+    color: black;
+    font-size: 2vw;
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+    text-shadow: 2px 2px rgba(44, 44, 44, 0.425);
+    background-color: white;
+}
+
+.zimmer-1-info::after {
+    content: 'CHELLAXEN';
+    opacity: 0;
+    color: black;
+    font-size: 2vw;
+    position: absolute;
+    background-color: white;
+    top: 70%;
+    left: 13%;
+
+}
+
