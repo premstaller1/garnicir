@@ -51,12 +51,12 @@ p {
 nav {
     display: flex;
     position: fixed;
-    padding: 0 10vw;
+    padding: 0 10%;
     background-color: #99755db7;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    width: 100vw;
+    width: 100%;
 }
 
 .logo-nav-left {
@@ -224,8 +224,8 @@ header {
 
 /************************* Zimmer Bereich *************************************/
 .zimmer {
-    background-color: #fff3db;
-    height: 200vh;
+    background-color: #f7f7f7;
+    height: 130vw;
     margin-top: 15%;
     transform: skewY(5deg);
     -webkit-box-shadow: 13px -3px 19px 13px rgba(0,0,0,0.54);
@@ -302,25 +302,112 @@ header {
 /************************* Zimmer Bereich *************************************/
 
 
-
 .haus-info-container {
     position: relative;
     z-index: 2;
-    padding: 2% 0%;
-    margin: 5% 10%;
-    border: 0.2vw solid #b89f88ce;
     transform: skewY(-5deg);
+    width: 100%;
+    padding-top: 8%;
 }
 
-.haus-info-container h3{
-    color: #b89f88;
+.haus-info-information-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+}
+
+.haus-info-information-text {
+    width: 30%;
+    height: 100%;
+}
+
+.haus-info-information-text-inner {
+    height: 100%;
+    width: auto;
+    background-color: gray;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.haus-info-information-text h3 {
+    padding: 5px 80px;
+    color: white;
     font-size: 2vw;
-    text-align: center;
-    padding-bottom: 1vh;
 }
 
-.haus-info-information {
-    padding: 4vh;
+.haus-info-information-carousel {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
 }
-/* external css: flickity.css */
 
+
+/************************* Carousel Bereich *************************************/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 1.5vw;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1.1vw;
+  padding: 0.8vw 1.1vw;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1}
+}
