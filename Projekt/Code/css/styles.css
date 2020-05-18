@@ -5,6 +5,25 @@
     box-sizing: border-box;
 }
 
+.home-button {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgb(199, 15, 15);
+    position: fixed;
+    top: 85%;
+    left: 2%;
+    z-index: 10;
+    opacity: 0.6;
+}
+
+.home-button a {
+    color: white;
+    font-size: 250%;
+    position: relative;
+    left: 29%;
+    top: 29%;
+}
 /*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
 
 body {
@@ -16,7 +35,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 h3 {
@@ -159,6 +177,7 @@ header {
 
 
 /**************************************** Über Uns BEREICH ****************************************/
+
 .about-us {
     background-color: #f7f7f7;
     transform: skewY(5deg);
