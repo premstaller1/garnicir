@@ -196,7 +196,7 @@ header {
 }
 
 .about-us-container h3 {
-    font-size: 6vh;
+    font-size: 6vw;
 }
 
 .about-us-content {
@@ -470,8 +470,8 @@ header {
     align-items: center;
     background-color: #f7f7f7;
     padding: 0% 10%;
+    margin-top: -5%;
     position: relative;
-    bottom: 50%;
 }
 
 .rezensionen-decoration {
@@ -483,12 +483,13 @@ header {
 
 .rezensionen-decoration::after {
     content: '';
-    width: 33%;
-    height: 40%;
+    width: 35%;
+    height: 50%;
     background-color: rgba(207, 207, 207, 0.425);
     position: absolute;
-    top: 12%;
-    left: 4%;
+    top: 0%;
+    left: 7%;
+    z-index: 0;
 }
 
 .rezensionen-slideshow-text {
