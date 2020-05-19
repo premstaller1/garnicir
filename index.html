@@ -152,17 +152,17 @@
                     <!-- Full-width images with number and caption text -->
                     <div class="mySlides fade">
                       <div class="numbertext">1 / 3</div>
-                      <img src="/Ressourcen/Bilder Zimmer/Berg_vers2.jpg" style="width:100%">
+                      <img src="/Ressourcen/wetransfer-04a8cf/IMG_4074.jpg" >
                     </div>
         
                     <div class="mySlides fade">
                       <div class="numbertext">2 / 3</div>
-                      <img src="/Ressourcen/Bilder Zimmer/Zimmer_vers2.jpg" style="width:100%">
+                      <img src="/Ressourcen/wetransfer-04a8cf/IMG_4096.jpg">
                     </div>
         
                     <div class="mySlides fade">
                       <div class="numbertext">3 / 3</div>
-                      <img src="/Ressourcen/Bilder Zimmer/059_stitch_vers2.jpg" style="width:100%">
+                      <img src="/Ressourcen/wetransfer-04a8cf/IMG_4028.jpg">
                     </div>
         
                     <!-- Next and previous buttons -->
@@ -238,10 +238,22 @@
     </div>
   </section>
 
+  <!-- Map Bereich -->
+
+
+  <div class="map">
+    <div class="map-text">
+      <h3>Damit sie sich nicht verlieren</h3>
+    </div>
+    <div id="map" class="map-area">
+
+    </div>  
+  </div>
+
+
   <footer>
 
   </footer>
-
 
   <script>
     var slideIndex = 1;
@@ -275,4 +287,17 @@ function showSlides(n) {
 
 
   </script>
+
+<script>
+  function initMap() {
+    var garnicir = {lat: 46.559705, lng: 11.716804};
+    var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 18, center: garnicir}
+    );
+    var marker = new google.maps.Marker({position: garnicir, map: map});
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9MbBJT3512GTfOaNTG9SAXcq_1zQRCYc&callback=initMap">
+</script>
 </body>
