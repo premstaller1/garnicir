@@ -627,24 +627,21 @@ header {
     padding: 0% 10%;
 }
 
-.map-text::before {
-    content: '';
-    height: 60%;
-    width: 40%;
-    background-color: rgba(207, 207, 207, 0.425);
-    position: absolute;
-    right: 55%;
-    top: 600%;
-}
-
 .map-text h3 {
     font-size: 2rem;
     color: #cf9a68;
+    padding-bottom: 4%;
 }
 
-#id {
+.map-text {
+    width: 100%;
+    height: auto;
+}
+
+#map {
     width: 100%;
     height: 400px;
+    z-index: 5;
 }
 
 .map-area {
@@ -652,12 +649,103 @@ header {
     width: 100%;
 }
 
-.map-text::after {
+.map::after {
     content: '';
-    height: 55%;
-    width: 40%;
-    background-color: rgba(179, 170, 170, 0.568);
-    position: absolute;
-    left: 60%;
-    top: 632%;
+    height: 60%;
+    width: 80%;
+    background-color: rgba(179, 170, 170, 0.336);
+    position: relative;
+    display: block;
+    bottom: 80%;
+    left: -10%;
+
 }
+
+/******************************** Footer Bereich ************************************************/
+
+footer {
+    height: 500px;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 3% 10%;
+    border-top: 2px solid rgb(165, 165, 165);
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer button {
+    cursor: pointer;
+}
+
+.footer-container {
+    width: 100%;
+    height: auto;
+}
+
+.footer-top-area {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+height:auto;
+}
+
+.left-area-footer {
+    width: 40%;
+}
+
+.right-area-footer {
+    width: 40%;
+}
+
+.right-area-footer-links,
+.left-area-footer-links {
+    text-align: center;
+}
+
+.right-area-footer-2,
+.left-area-footer-2 {
+    margin: 30px 0px;
+}
+
+.middle-area-footer {
+    font-size: 230%;
+    width: 20%;
+}
+
+.footer-icons {
+    text-align: center;
+    padding-bottom: 40%;
+    border-bottom: 1px solid rgb(160, 156, 156);
+}
+
+.fa-instagram {
+    padding-right: 5%;
+}
+
+.fa-facebook {
+    padding-left: 5%;
+}
+
+.middle-area-footer a {
+    text-align: center;
+}
+
+.footer-book-button {
+    text-align: center;
+    height: 40%;
+    padding-top: 25%;
+}
+
+.footer-book-button h3 {
+    font-size: 2.1rem;
+    padding-bottom: 10%;
+}
+
+.footer-book-button button {
+    padding: 14px 50px;
+    border: 1px solid black;
+    font-size: 22px;
+}
+
