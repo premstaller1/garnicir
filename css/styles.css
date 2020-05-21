@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .home-button {
@@ -18,13 +17,14 @@
     opacity: 0.6;
 }
 
-.home-button a {
+.home-button i {
     color: white;
     font-size: 250%;
     position: relative;
     left: 29%;
     top: 29%;
 }
+
 /*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
 
 body {
