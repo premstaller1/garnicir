@@ -642,6 +642,7 @@ header {
     width: 100%;
     height: 400px;
     z-index: 5;
+    border: 1px solid rgba(59, 57, 57, 0.226);
 }
 
 .map-area {
