@@ -1,0 +1,302 @@
+@media only screen and (max-width: 840px) {
+    
+    .logo-nav-left {
+        display: none;
+    }
+
+    .list-nav-button button {
+        display: none;
+    }
+
+    nav {
+        padding: 0% 0%;
+        justify-content: space-evenly;
+        background-color: transparent;
+    }
+
+    .menu-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-wrap .toggler {
+        display: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    .menu-wrap .hamburger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        background-color: #ddd2d2b7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hamburger Line */
+    .menu-wrap .hamburger > div {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+
+    /* Top and bottom lines */
+    .menu-wrap .hamburger > div:before,
+    .menu-wrap .hamburger > div:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+
+    /* Moves Line down */
+    .menu-wrap .hamburger > div:after {
+        top: 10px;
+    }
+
+    /* Toggler Animate */
+    .menu-wrap .toggler:checked + .hamburger > div{
+        transform: rotate(135deg);
+    }
+
+    /* Turn lines into X */ 
+    .menu-wrap .toggler:checked + .hamburger > div:before,
+    .menu-wrap .toggler:checked + .hamburger > div:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Rotate on hover when checked */ 
+    .menu-wrap .toggler:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+    }
+
+    /* Show Menu */
+
+    .menu-wrap .toggler:checked ~ .menu {
+        visibility: visible;
+    }
+
+    .menu-wrap .toggler:checked ~ .menu > div {
+        transform: scale(1);
+        transition-duration: 0.4s;
+    }
+
+    .menu-wrap .toggler:checked ~ .menu > div > div {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+
+    .menu-wrap .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-wrap .menu > div {
+        background: #f7f7f7;
+        border-radius: 50%;
+        width: 200vw;
+        height: 200vw;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+
+    .menu-wrap .menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .menu-wrap .menu > div > div > ul > li {
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: inherit;
+    }
+
+    .menu-wrap .menu > div > div > ul {
+        display: block;
+    
+    }
+
+    .menu-wrap .menu > div > div > ul > li > a {
+        color: inherit;
+        transition: color 0.4 ease;
+    }
+
+    /* About Us Area**************************************/ 
+
+    .about-us-content {
+        display: block !important;
+    }
+
+    .about-us-image {
+        width: 100% !important;
+        height: auto;
+        padding: 0;
+        margin: 2% 0%;
+    }
+
+    .about-us-text {
+        width: 100% !important;
+    }
+
+    .about-us {
+        height: 170vh;
+        overflow: hidden;
+    }
+
+    .about-us-container {
+        height: 100%;
+
+    }
+
+    .about-us-image div::before {
+        display: none;
+
+    }
+
+    /* Zimmer Area ****************************************/
+
+    .zimmer {
+        height: auto;
+    }
+    .zimmer-container-img {
+        display: block;
+    }
+
+    #zimmer-img {
+        max-width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .zimmer-1-info::before {
+        bottom: 78%;
+        left: 40%;
+    }
+
+    .zimmer-2-info::before {
+        bottom: 47%;
+        left: 40%;
+    }
+
+    .zimmer-3-info::before {
+        bottom: 14%;
+        left: 40%;
+    }
+
+    /* karousel Area *************************************/
+
+    .haus-info-information-container {
+        display: block;
+        height: 100vh;
+    }
+
+    .haus-info-information-carousel {
+        height: auto;
+        width: 100%;
+    }
+
+    .haus-info-information-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .haus-info-information-text h3 {
+        text-align: center;
+        width: 100%;
+    }
+
+    /** Rezensionen Area ****************************/
+
+    .rezensionen {
+        height: 100vh;
+    }
+    .rezensionen-container {
+        bottom: 8%;
+        display: block;
+        border-top: 2px solid rgba(128, 128, 128, 0.733);
+        padding-top: 10px;
+        height: 100%;
+    }
+
+    .rezensionen-slideshow {
+        width: 100%;
+        margin: 0;
+    }
+
+    .rezensionen-decoration {
+        width: 100%;
+        height: auto;
+        text-align: right;
+        padding-top: 60px;
+        margin-bottom: -70px;
+    }
+
+    .rezensionen-decoration-text {
+        width: 100%;
+    }
+
+    .rezensionen-decoration::after {
+        left: 9%;
+        height: 35%;
+        width: 30%;
+    }
+
+    .prev {
+        font-size: 5vw;
+        padding: 4vw;
+    }
+
+    .next {
+        font-size: 5vw;
+        padding: 4vw;
+    }
+    /* Map Area *****************************/
+
+    #lage {
+        padding: 5% 0%;
+        margin-top: 30%;
+    }
+
+    #lage h3 {
+        padding: 3% 5%;
+    }
+
+}

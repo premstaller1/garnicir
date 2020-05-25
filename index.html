@@ -11,6 +11,7 @@
   <link href="/Ressourcen/Font/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/querries.css">
 
 
 </head>
@@ -19,30 +20,37 @@
 
 <!-- Home-Button Area   -->
 
-<a href="#hero">
+  <a href="#hero">
   <div class="home-button">
       <i class="fas fa-sort-up"></i>
   </div>
-</a>
+  </a>
 
 <!-- Header Area   -->
 
   <header id="hero">
-    <nav>
+    <nav class="menu-wrap">
 
       <div class="logo-nav-left">
         <a href="index.html">Garni cir</a>
       </div>
 
       <div class="list-nav-right">
-        <div class="list-nav">
-          <ul>
-            <a href="#hero"><li>Homepage</li></a>
-            <a href="#lage"><li>Lage</li></a>
-            <a href="zimmer.html"><li>Unsere Zimmer</li></a>
-            <a href="#"><li>Kontakt</li></a>
-          </ul>
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div class="list-nav">
+              <ul>
+                <a href="#hero"><li>Homepage</li></a>
+                <a href="#lage"><li>Lage</li></a>
+                <a href="zimmer.html"><li>Zimmer</li></a>
+                <a href="#"><li>Kontakt</li></a>
+              </ul>
+            </div>
+          </div>
         </div>
+
       
         <div class="list-nav-button">
           <a href="index.html" class="button-nav-link">
@@ -298,7 +306,9 @@
 
   </footer>
 
-  <script>
+
+
+<script>
     var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -329,7 +339,7 @@ function showSlides(n) {
 }
 
 
-  </script>
+</script>
 
 <script>
   function initMap() {
@@ -340,7 +350,9 @@ function showSlides(n) {
     var marker = new google.maps.Marker({position: garnicir, map: map});
   }
 </script>
+
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9MbBJT3512GTfOaNTG9SAXcq_1zQRCYc&callback=initMap">
 </script>
+
 </body>
