@@ -2,12 +2,7 @@
     body {
         font-family: 'Comfortaa', cursive;
         color: rgb(68, 65, 65);
-        background-color: #ddd2d2;
-        background-image: url(/Ressourcen/wetransfer-04a8cf/Wichtige/IMG_9835.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+        background-color: #f7f7f7;
     }
     
     /************ Nav Bereich *******************/
@@ -190,10 +185,12 @@
     .about-us {
         height: 170vh;
         overflow: hidden;
+        transform: skewY(0deg)
     }
 
     .about-us-container {
         height: 100%;
+        transform: skewY(0deg)
 
     }
 
@@ -206,6 +203,11 @@
 
     .zimmer {
         height: auto;
+        transform: skewY(0deg)
+    }
+
+    .zimmer-container {
+        transform: skewY(0deg)
     }
     .zimmer-container-img {
         display: block;
@@ -234,6 +236,10 @@
 
     /* karousel Area *************************************/
 
+    .haus-info-container {
+        transform: skewY(0deg)
+    }
+    
     .haus-info-information-container {
         display: block;
         height: 100vh;
