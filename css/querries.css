@@ -1,5 +1,16 @@
 @media only screen and (max-width: 840px) {
+    body {
+        font-family: 'Comfortaa', cursive;
+        color: rgb(68, 65, 65);
+        background-color: #ddd2d2;
+        background-image: url(/Ressourcen/IMG/wetransfer-615be1/saiser.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
     
+    /************ Nav Bereich *******************/
     .logo-nav-left {
         display: none;
     }
