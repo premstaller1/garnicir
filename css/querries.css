@@ -1,5 +1,14 @@
 @media only screen and (max-width: 840px) {
 
+    body {
+        background-color: white;
+        background-image: url(/Ressourcen/wetransfer-04a8cf/IMG_4134.jpg);
+    }
+
+    header {
+        background-image: none;
+    }
+    
     /************ Nav Bereich *******************/
     .logo-nav-left {
         display: none;
