@@ -31,7 +31,7 @@ body {
     font-family: 'Comfortaa', cursive;
     color: rgb(68, 65, 65);
     background-color: #ddd2d2;
-    background-image: url(/Ressourcen/IMG/wetransfer-615be1/saiser.jpg);
+    background-image: url(/Ressourcen/berg&zimmer-img/sommerurlaub-seiser-alm-suedtirol.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -218,16 +218,12 @@ header {
 }
 
 .about-us-image div {
-    max-width: 100%;
-    height: auto;
-}
-
-.about-us-image div img {
-    max-width: 100%;
-    display: block;
-    height: 500px;
-    object-fit: cover;
-
+    background-image: url(/Ressourcen/berg&zimmer-img/valgardena.it.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .about-us-text {
