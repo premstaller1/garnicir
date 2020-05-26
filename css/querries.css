@@ -320,7 +320,7 @@
     /* Map Area *****************************/
 
     #lage {
-        padding: 5% 0%;
+       
     }
 
     #lage h3 {
@@ -468,7 +468,7 @@
 
     /**************** Rezensionen Container *********************/
     .rezensionen {
-        height: 180vh;
+        height: 185vh;
     }
     
     .rezensionen-container {
