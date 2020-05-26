@@ -803,7 +803,7 @@ height:auto;
     left: -1px;
     border: 1px solid black;
     transform: scaleX(.0);
-    transform-origin: center;
+    transform-origin: right;
     z-index: -1;
     transition: transform 400ms ease-in-out;
 }
