@@ -2,6 +2,7 @@
 
     body {
         background-color: #f7f7f7;
+        background-image: none;
     }
 
     header {
@@ -252,7 +253,7 @@
 
     .haus-info-information-container {
         display: block;
-        height: 100vh;
+        height: 70vh;
     }
 
     .haus-info-information-carousel {
@@ -289,6 +290,7 @@
         width: 100%;
         margin: 0;
     }
+    
 
     .rezensionen-decoration {
         width: 100%;
@@ -317,11 +319,11 @@
         font-size: 5vw;
         padding: 4vw;
     }
-    /* Map Area *****************************/
 
-    #lage {
-       
+    .item-2-span {
+        display: none;
     }
+    /* Map Area *****************************/
 
     #lage h3 {
         padding: 3% 5%;
@@ -424,11 +426,11 @@
     }
 
     .about-us {
-        height: 190vh;
+        height: 150vh;
     }
 
     .about-us-container {
-        height: 190vh;
+        height: 100%;
         margin: 0 1%;
     }
     /************ Zimmer Bereich *******************/
@@ -468,13 +470,13 @@
 
     /**************** Rezensionen Container *********************/
     .rezensionen {
-        height: 185vh;
+        height: 115vh;
     }
     
     .rezensionen-container {
         padding-top: 5%;
         margin-top: 16%;
-        height: 200vh;
+        height: 100vh;
     }
 
     .rezensionen-decoration::after {
@@ -483,15 +485,24 @@
         left: 0%;
     }
 
+    .rezensionen-slideshow {
+        height: 90%;
+        padding-top: 45px;
+    }
+
+    .rezensionen-slideshow-text {
+        height: 100%;
+    }
+
     .rezensionen-slideshow::after {
-        top: 75%;
+        top: 90%;
         right: -10%;
         z-index: 0;
     }
 
     .rezensionen-slideshow::before {
-        top: 75%;
-        right: 92%;
+        top: 90%;
+        right: 87%;
         z-index: 1;
     }
 
@@ -559,4 +570,10 @@
         height: 350vh;
     }
 
+}
+
+@media only screen and (max-width: 400px) {
+    .about-us {
+        height: 150vh;
+    }
 }
