@@ -88,13 +88,17 @@ nav {
     align-items: center;
 }
 
+.list-nav li {
+    position: relative;
+}
+
 .list-nav-right ul {
     display: flex;
     align-items: center;
 }
 
 .list-nav-right li {
-    padding: 19px;
+    margin: 19px;
     transition: background-color 250ms ease-in-out;
     font-size: 14px;
 }
@@ -107,27 +111,63 @@ header {
     height: 730px;
 }
 
-.list-nav-right li:hover {
-    background-color: #cf9a68;
+.list-nav li:hover::after {
+    transform: scaleX(1);
+}
+
+.list-nav li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+
+    transform: scaleX(.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
 }
 
 .list-nav-button button {
-    border: 1px solid #fff3db;
-    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.432);
+    border: 1px solid black;
     padding: 10px 17px;
     font-size: 14px;
     cursor: pointer;
     color: rgb(68, 65, 65);
-    transition-property: background-color;
-    transition: all 200ms ease-in-out;
+    position: relative;
+    z-index: 1;
+    transition: color 300ms ease-in-out;
+}
+
+.list-nav-button button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: -1px;
+    left: -1px;
+    border: 1px solid black;
+    transform: scaleX(.0);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 400ms ease-in-out;
+}
+
+.list-nav-button button:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+
+}
+
+.list-nav-button button:hover {
+    color: white;
 }
 
 .button-nav-link {
     margin-left: 22px;
-}
-
-.list-nav-button button:hover {
-    background-color: rgba(255, 255, 255, 0.308);
 }
 
 .toggler {
@@ -748,8 +788,72 @@ height:auto;
     padding: 14px 50px;
     border: 1px solid black;
     font-size: 22px;
+    position: relative;
+    z-index: 1;
+    transition: all 400ms ease-in-out;
+}
+
+.footer-book-button button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: -1px;
+    left: -1px;
+    border: 1px solid black;
+    transform: scaleX(.0);
+    transform-origin: center;
+    z-index: -1;
+    transition: transform 400ms ease-in-out;
+}
+
+.footer-book-button button:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-book-button button:hover {
+    color: white;
 }
 
 .footer-mobile {
     display: none;
+}
+
+.right-area-footer-links a,
+.left-area-footer-links a {
+    position: relative;
+}
+
+.left-area-footer a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+
+    transform: scaleX(.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.right-area-footer-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+
+    transform: scaleX(.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.right-area-footer-links a:hover::after,
+.left-area-footer-links a:hover::after {
+    transform: scaleX(1);
 }
