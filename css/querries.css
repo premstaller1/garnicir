@@ -3,7 +3,7 @@
         font-family: 'Comfortaa', cursive;
         color: rgb(68, 65, 65);
         background-color: #f7f7f7;
-        background-attachment: fixed;
+        overflow: hidden;
     }
     
     /************ Nav Bereich *******************/
@@ -25,7 +25,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 10;
     }
 
     .menu-wrap .toggler {
@@ -329,6 +329,7 @@
 
     .hero-zimmer-text {
         padding-top: 5%;
+        border: 0;
     }
     .hero-zimmer-container {
         left: 0;
