@@ -1,12 +1,8 @@
 @media only screen and (max-width: 840px) {
 
     body {
-        background-color: white;
-        background-image: url(/Ressourcen/wetransfer-04a8cf/IMG_4134.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-width: 100%;
+        background-color: #f7f7f7;
+
     }
 
     header {
@@ -175,18 +171,18 @@
     /* About Us Area**************************************/ 
 
     .about-us-content {
-        display: block !important;
+        display: block;
     }
 
     .about-us-image {
-        width: 100% !important;
+        width: 100%;
         height: auto;
         padding: 0;
         margin: 2% 0%;
     }
 
     .about-us-text {
-        width: 100% !important;
+        width: 100% ;
     }
 
     .about-us {
@@ -197,8 +193,8 @@
 
     .about-us-container {
         height: 100%;
-        transform: skewY(0deg)
-
+        transform: skewY(0deg);
+        margin-bottom: 0px;
     }
 
     .about-us-image div::before {
@@ -272,6 +268,7 @@
 
     .rezensionen {
         height: 100vh;
+        background-color: #f7f7f7;
     }
     .rezensionen-container {
         bottom: 8%;
@@ -317,7 +314,6 @@
 
     #lage {
         padding: 5% 0%;
-        margin-top: 30%;
     }
 
     #lage h3 {
@@ -468,7 +464,7 @@
 
     /**************** Rezensionen Container *********************/
     .rezensionen {
-        height: 200vh;
+        height: 180vh;
     }
     
     .rezensionen-container {
