@@ -3,6 +3,10 @@
     body {
         background-color: white;
         background-image: url(/Ressourcen/wetransfer-04a8cf/IMG_4134.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
     }
 
     header {
