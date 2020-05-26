@@ -810,6 +810,7 @@ height:auto;
 
 .footer-book-button button:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 .footer-book-button button:hover {
