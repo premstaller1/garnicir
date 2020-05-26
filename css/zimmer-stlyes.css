@@ -14,6 +14,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h3 {
@@ -107,12 +108,7 @@ nav {
 }
 
 header {
-    background-image: url(/Ressourcen/wetransfer-615be1/157.JPG);
     height: 730px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .list-nav-right li:hover {

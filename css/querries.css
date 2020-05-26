@@ -1,11 +1,5 @@
 @media only screen and (max-width: 840px) {
-    body {
-        font-family: 'Comfortaa', cursive;
-        color: rgb(68, 65, 65);
-        background-color: #f7f7f7;
-        overflow: hidden;
-    }
-    
+
     /************ Nav Bereich *******************/
     .logo-nav-left {
         display: none;
