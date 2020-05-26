@@ -470,7 +470,7 @@
 
     /**************** Rezensionen Container *********************/
     .rezensionen {
-        height: 115vh;
+        height: 120vh;
     }
     
     .rezensionen-container {
@@ -502,7 +502,7 @@
 
     .rezensionen-slideshow::before {
         top: 90%;
-        right: 87%;
+        right: 92%;
         z-index: 1;
     }
 
