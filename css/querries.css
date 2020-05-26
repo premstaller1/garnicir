@@ -47,7 +47,6 @@
         width: 60px;
         height: 60px;
         padding: 1rem;
-        background-color: #ddd2d2b7;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -58,7 +57,7 @@
         position: relative;
         width: 100%;
         height: 2px;
-        background-color: white;
+        background-color: black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -239,7 +238,7 @@
     .haus-info-container {
         transform: skewY(0deg)
     }
-    
+
     .haus-info-information-container {
         display: block;
         height: 100vh;
@@ -258,6 +257,7 @@
     .haus-info-information-text h3 {
         text-align: center;
         width: 100%;
+        color: #cf9a68;
     }
 
     /** Rezensionen Area ****************************/
@@ -314,6 +314,240 @@
 
     #lage h3 {
         padding: 3% 5%;
+    }
+
+    /********* Footer Area ************************/
+    footer {
+        display: inline-block;
+    }
+
+
+
+
+    /**************************** ZIMMER HTML DATEI!!!**************************************************************/
+
+    .hero-zimmer-text {
+        padding-top: 5%;
+    }
+    .hero-zimmer-container {
+        left: 0;
+        top: 20%;
+        width: 100%;
+        height: 400px;
+        text-align: center;
+    }
+
+    .hero-zimmer-container h3 {
+        padding-bottom: 10%;
+        color: #cf9a68;
+    }
+
+    .hero-zimmer-container a {
+        padding: 5%;
+        border: 1px solid black;
+    }
+
+    .zimmer-area {
+        height: 330vh;
+    }
+
+    .zimmer-area p {
+        padding: 10px 0px;
+    }
+/************************ Zimmer 1 *****************************/
+    .zimmer-container-1 {
+        display: block;
+        padding: 0;
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .zimmer-area-text {
+        width: 100%;
+        height: auto;
+    }
+
+    .zimmer-area-img {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 60px;
+    }
+
+/************************ Zimmer 2 *******************************/
+
+    .zimmer-container-2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 0;
+        padding-bottom: 60px;
+    }
+
+    .zimmer-area-text-2 {
+        width: 100%;
+        height: auto;
+    }
+
+
+/************************ Zimmer 3 *****************************/
+    .zimmer-container-3 {
+        display: block;
+        padding: 0;
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+/***************************** DEKO ZIMMER *****************************/
+    .zimmer-area-text-2::after {
+    width: 9%;
+}
+}
+
+@media only screen and (max-width: 460px) {
+    /************ About us Bereich *******************/
+    .about-us-container h3 {
+        font-size: 6vh;
+    }
+
+    .about-us {
+        height: 190vh;
+    }
+
+    .about-us-container {
+        height: 190vh;
+        margin: 0 1%;
+        padding: ;
+    }
+    /************ Zimmer Bereich *******************/
+    .zimmer {
+        margin-top: 50px;
+    }
+
+    .zimmer-container {
+        padding: 0;
+    }
+
+    .zimmer-container h3 {
+        padding: 10% 0%;
+        color: #cf9a68;
+    }
+
+    .zimmer-1-info::before {
+        bottom: 74%;
+        left: 35%;
+    }
+
+    .zimmer-2-info::before {
+        bottom: 44%;
+        left: 35%;
+    }
+
+    .zimmer-3-info::before {
+        bottom: 13%;
+        left: 33%;
+    }
+
+    /********* Karousel Bereich *********************/
+    .haus-info-information-container {
+        height: 70vh;
+    }
+    .haus-info-information-container::before {
+        height: 30%;
+        bottom:20%;
+    }
+
+    /**************** Rezensionen Container *********************/
+    .rezensionen {
+        height: 200vh;
+    }
+    
+    .rezensionen-container {
+        padding-top: 5%;
+        margin-top: 16%;
+        height: 200vh;
+    }
+
+    .rezensionen-decoration::after {
+        height: 40%;
+        top: 8%;
+        left: 0%;
+    }
+
+    .rezensionen-slideshow::after {
+        top: 75%;
+        right: -10%;
+        z-index: 0;
+    }
+
+    .rezensionen-slideshow::before {
+        top: 75%;
+        right: 92%;
+        z-index: 1;
+    }
+
+    .span-item-1, .span-item-3, .span-item-2 {
+        text-align: center;
+    }
+
+    
+    /******************* Footer Area ************************/
+
+    footer {
+        height: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: block;
+    }
+
+    .footer-mobile-top {
+        padding: 10% 0% 0% 0%;
+    }
+
+    .footer-mobile-button h3{
+        font-size: 5vh;
+        color: #cf9a68;
+    }
+
+    .footer-mobile-button button {
+        width: 100%;
+        border: 1px solid black;
+        font-size: 22px;
+        padding: 5%;
+        margin: 20% 0%;
+    }
+
+    footer a {
+        width: 100%;
+    }
+
+    .footer-mobile-button {
+        padding: 0% 2%;
+    }
+
+    .footer-mobile-links li{
+        padding: 5% 0%;
+    }
+
+    .right-area-footer-2, .left-area-footer-2 {
+        margin: 0;
+    }
+
+    /********** Impressum *********************/
+    .impressum-title {
+        font-size: 4vh;
+    }
+
+    /******************************************* ZIMMER HTML CODE!!!***********************************/
+    .zimmer-area {
+        height: 350vh;
     }
 
 }

@@ -59,6 +59,10 @@ button {
 p {
     font-size: 18px;
 }
+
+.toggler {
+    display: none;
+}
 /************************* RICHTIGER CODE ******************************************/
 
 
@@ -240,4 +244,8 @@ height:auto;
     padding: 14px 50px;
     border: 1px solid black;
     font-size: 22px;
+}
+
+.footer-mobile {
+    display: none;
 }

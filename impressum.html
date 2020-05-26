@@ -11,6 +11,7 @@
   <link href="/Ressourcen/Font/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/impressum-styles.css">
+  <link rel="stylesheet" href="/css/querries.css">
 
 
 </head>
@@ -20,21 +21,28 @@
   <!-- Header Area   -->
 
   <header id="hero">
-    <nav>
+    <nav class="menu-wrap">
 
       <div class="logo-nav-left">
         <a href="index.html">Garni cir</a>
       </div>
 
       <div class="list-nav-right">
-        <div class="list-nav">
-          <ul>
-            <a href="#"><li>Homepage</li></a>
-            <a href="#"><li>Lage</li></a>
-            <a href="zimmer.html"><li>Unsere Zimmer</li></a>
-            <a href="#"><li>Kontakt</li></a>
-          </ul>
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div class="list-nav">
+              <ul>
+                <a href="index.html"><li>Homepage</li></a>
+                <a href="#lage"><li>Lage</li></a>
+                <a href="zimmer.html"><li>Zimmer</li></a>
+                <a href="#"><li>Kontakt</li></a>
+              </ul>
+            </div>
+          </div>
         </div>
+
       
         <div class="list-nav-button">
           <a href="index.html" class="button-nav-link">
@@ -115,6 +123,31 @@
             </ul>
   
           </div>
+  
+        </div>
+      </div>
+  
+      <div class="footer-mobile">
+  
+        <div class="footer-mobile-top">
+          <div class="footer-mobile-button">
+            <h3>Book a Room!</h3>
+            <a href="#">
+              <button>Book it!</button>
+            </a>
+          </div>
+        </div>
+  
+        <div class="footer-mobile-bottom">
+  
+          <ul class="footer-mobile-links">
+            <li><a href="/impressum.html">Impressum</a></li>
+            <li class="left-area-footer-2"><a href="/impressum.html">Datenschutz</a></li>
+            <li><a href="/index.html">Über uns</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li class="right-area-footer-2"><a href="https://www.valgardena.it/de/">Dolomiten</a></li>
+            <li><a href="https://www.suedtirol.info/de">Südtirol</a></li>
+          </ul>
   
         </div>
       </div>

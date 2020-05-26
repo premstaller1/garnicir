@@ -40,7 +40,7 @@ body {
 
 h3 {
     font-family: 'Petit Formal Script', cursive;
-    color: #cf9a68
+    color: #cf9a68;
 }
 
 html {
@@ -113,7 +113,7 @@ header {
 }
 
 .list-nav-right li:hover {
-    background-color: #99755dec;
+    background-color: #cf9a68;
 }
 
 .list-nav-button button {
@@ -286,7 +286,7 @@ header {
 .zimmer-container h3 {
     padding: 4% 0%;
     text-align: center;
-    color: #b89f88;
+    color: #cf9a68;
     font-size: 2rem;
 }
 
@@ -372,7 +372,7 @@ header {
 .haus-info-information-text h3 {
     padding: 4% 5%; 
     font-size: 2rem;
-    color: #b89f88;
+    color: #cf9a68;
     z-index: 6;
 }
 
@@ -515,7 +515,7 @@ header {
 
 .rezensionen-decoration-text h3 {
     font-size: 2.1rem;
-    color: #b89f88;
+    color: #cf9a68;
 }
 
 .rezensionen-slideshow-text span{
@@ -757,4 +757,6 @@ height:auto;
     font-size: 22px;
 }
 
-
+.footer-mobile {
+    display: none;
+}

@@ -43,6 +43,10 @@ p {
     font-size: 18px;
 }
 
+.toggler {
+    display: none;
+}
+
 /************************* RICHTIGER CODE ******************************************/
 
 /************************* Home Button **********************************/ 
@@ -50,7 +54,7 @@ p {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: rgb(199, 15, 15);
+    background-color: rgb(252, 5, 5);
     position: fixed;
     top: 85%;
     left: 2%;
@@ -298,6 +302,7 @@ header {
     z-index: 1;
 }
 
+
 /************** Zimmer-3 Bereich *********************/
 
 .zimmer-container-3 {
@@ -408,4 +413,8 @@ height:auto;
     padding: 14px 50px;
     border: 1px solid black;
     font-size: 22px;
+}
+
+.footer-mobile {
+    display: none;
 }
