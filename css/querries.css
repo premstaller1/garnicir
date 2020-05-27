@@ -2,10 +2,11 @@
 
     body {
         background-color: #f7f7f7;
+        background-image: none;
     }
 
     header {
-        background-image: url(/Ressourcen/wetransfer-615be1/sommerurlaub-seiser-alm-suedtirol.jpg);
+        background-image: url(/Ressourcen/berg&zimmer-img/sommerurlaub-seiser-alm-suedtirol.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
