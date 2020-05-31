@@ -6,7 +6,87 @@
  */
 /* ==========================================================================
    Base styles: opinionated defaults
-   ========================================================================== */
+   ========================================================================== 
+
+   
+
+
+
+
+ /******************************************************* Persönlicher Code! ***********************************************************/
+
+.return-button {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(128, 128, 128, 0.459);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+}
+
+.return-button i {
+  font-size: 150%;
+  color: rgba(0, 0, 0, 0.63);
+  position: relative;
+  left: 22%;
+  top: 25%;
+}
+
+.return-button:hover {
+  width: 100%;
+  border-radius: 0%;
+}
+
+.return-button:hover i {
+  left: 2%;
+}
+
+.return-button:hover::after {
+  content: 'Homepage';
+  position: relative;
+  top: 20%;
+  left: 10%;
+  color: black;
+  transition: 0ms ease-in-out;
+}
+
+@media only screen and (max-width: 800px) {
+  
+  .return-button::after {
+    content: 'Homepage';
+    position: relative;
+    top: 20%;
+    left: 10%;
+    color: black;
+  }
+
+  .return-button {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.459);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+  }
+
+  .return-button i {
+    left: 5%;
+  }
+
+  .return-button:hover {
+    width: 100%;
+  }
+
+  .return-button:hover::after {
+    left: 10%;
+  }
+
+}
+
+
+*/
 html,
 button,
 input,
