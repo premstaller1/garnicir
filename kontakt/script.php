@@ -1,10 +1,8 @@
 <?php
-/**
- * Hotel reservation submit
- */
 
-define('_EMAIL_TO', 'and.re@hotmail.de'); // your email address where reservation details will be received
-define('_EMAIL_SUBJECT', 'Hotel Reservation Form'); // email message subject
+
+define('_EMAIL_TO', 'and.re@hotmail.de');
+define('_EMAIL_SUBJECT', 'Hotel Reservation Form'); 
 define('_EMAIL_FROM', $_POST["email"]);
 
 $fields = array(
@@ -63,3 +61,4 @@ if (empty($error_fields)){
 }else{
 	echo json_encode(array('code' => 'failed', 'fields' => $error_fields));
 }
+
