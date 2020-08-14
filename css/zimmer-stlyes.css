@@ -55,12 +55,18 @@ p {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: rgb(252, 5, 5);
+    background-color: #686868a1;
     position: fixed;
     top: 85%;
     left: 2%;
     z-index: 10;
-    opacity: 0.6;
+    opacity: 1;
+    transition: 250ms ease-in-out;
+}
+
+.home-button:hover {
+    transform: rotate(180deg);
+    background-color: #ddd2d2;;
 }
 
 .home-button i {
@@ -75,12 +81,17 @@ p {
 nav {
     display: flex;
     position: fixed;
-    padding: 0 10%;
-    background-color: #ddd2d2b7;
+    padding: 1% 10%;
+    background-color: #ddd2d2;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 6;
     width: 100%;
+    transition: 200ms ease;
+}
+
+nav:hover {
+    padding: 2% 10%;
 }
 
 .logo-nav-left {
@@ -92,6 +103,10 @@ nav {
     align-items: center;
 }
 
+.list-nav li {
+    position: relative;
+}
+
 .list-nav-right ul {
     display: flex;
     align-items: center;
@@ -100,33 +115,13 @@ nav {
 .list-nav-right li {
     margin: 19px;
     transition: background-color 250ms ease-in-out;
-    font-size: 14px;
-}
-
-.list-nav li {
-    position: relative;
+    font-size: 16px;
 }
 
 .logo-nav-left a {
     font-size: 25px;
 }
 
-header {
-    height: 730px;
-}
-
-.list-nav-button button {
-    border: 1px solid black;
-    padding: 10px 17px;
-    font-size: 14px;
-    cursor: pointer;
-    color: rgb(68, 65, 65);
-    position: relative;
-}
-
-.button-nav-link {
-    margin-left: 22px;
-}
 
 .list-nav li:hover::after {
     transform: scaleX(1);
@@ -149,8 +144,8 @@ header {
 .list-nav-button button {
     background-color: rgba(255, 255, 255, 0.432);
     border: 1px solid black;
-    padding: 10px 17px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 16px;
     cursor: pointer;
     color: rgb(68, 65, 65);
     position: relative;
@@ -187,8 +182,30 @@ header {
     margin-left: 22px;
 }
 
-/************************* Hero-text Bereich *************************************/
+.toggler {
+    display: none;
+}
 
+.logo-img {
+    max-height: 100%;
+    width: 100%;
+}
+
+.logo-placeholder {
+    position: fixed;
+    left: 10%;
+    z-index: 8;
+    width: 10%;
+    background-color: #ddd2d2;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+/************************* Hero-text Bereich *************************************/
+header {
+    height: 730px;
+}
 .hero-zimmer-container {
     position: relative;
     top: 30%;
