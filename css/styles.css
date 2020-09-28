@@ -267,7 +267,6 @@ nav:hover {
 .list-nav-button button:hover::after {
     transform: scaleX(1);
     transform-origin: right;
-
 }
 
 .list-nav-button button:hover {
