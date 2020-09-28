@@ -21,7 +21,7 @@
 
     .logo-img {
         max-height: 100%;
-        width: 15%;
+        width: 20%;
         position: relative;
         left: 40%;
         background-color: #ddd2d2;
@@ -203,6 +203,7 @@
         height: 500px;
         margin: 2% 0%;
         padding-right: 0;
+        padding-left: 0;
     }
 
     
@@ -609,3 +610,25 @@
         height: 150vh;
     }
 }
+
+@media only screen and (max-width: 660px){
+    .logo-img {
+        width: 25%;
+        left: 35%;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .logo-img {
+        width: 31%;
+        left: 35%;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .logo-img {
+        width: 40%;
+        left: 35%;
+    }
+}
+    
