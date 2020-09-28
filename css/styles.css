@@ -436,7 +436,7 @@ header {
 .example_f {
     border-radius: 4px;
     background: #ddd2d2ee;
-    border: 2px solid black;
+    border: 1px solid black;
     text-align: center;
     font-size: 18px;
     padding: 20px;
