@@ -231,7 +231,6 @@ nav:hover {
     width: 100%;
     height: 1px;
     background-color: currentColor;
-
     transform: scaleX(.1);
     transform-origin: left;
     transition: transform 250ms ease-in-out;
@@ -261,7 +260,9 @@ nav:hover {
     transform: scaleX(.0);
     transform-origin: left;
     z-index: -1;
-    transition: transform 400ms ease-in-out;
+    transition-property: transform, border, brackground-color;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
 }
 
 .list-nav-button button:hover::after {
@@ -432,7 +433,44 @@ header {
 }
 
 
+.example_f {
+    border-radius: 4px;
+    background: #ddd2d2ee;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 50px;
+  }
+  .example_f span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .example_f span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .example_f:hover span {
+    padding-right: 25px;
+  }
+  .example_f:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
+  .example_f span {
+    color:rgb(68, 65, 65)
+  }
 /************************* Zimmer Bereich *************************************/
 .zimmer {
     background-color: #f7f7f7;
