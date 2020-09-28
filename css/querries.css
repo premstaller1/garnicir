@@ -614,21 +614,21 @@
 @media only screen and (max-width: 660px){
     .logo-img {
         width: 25%;
-        left: 35%;
+        left: 30%;
     }
 }
 
 @media only screen and (max-width: 430px){
     .logo-img {
         width: 31%;
-        left: 35%;
+        left: 30%;
     }
 }
 
 @media only screen and (max-width: 370px){
     .logo-img {
         width: 40%;
-        left: 35%;
+        left: 30%;
     }
 }
     
