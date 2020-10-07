@@ -4,6 +4,127 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.home-button {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #686868ea;
+    position: fixed;
+    top: 85%;
+    left: 2%;
+    z-index: 10;
+    opacity: 1;
+    transition: 450ms ease-in-out;
+}
+
+.home-button:hover {
+    transform: rotate(360deg);
+    background-color: #ddd2d2;
+}
+
+.home-button:hover i {
+    color: #686868ea;
+}
+
+.home-button i {
+    color: white;
+    font-size: 250%;
+    position: relative;
+    left: 29%;
+    top: 29%;
+    transition: 150ms;
+}
+
+/*** Language Button ****/
+
+.language {
+    color: white;
+    position: fixed;
+    top: 57%;
+    left: 2%;
+    z-index: 100;
+    height: 60px;
+    outline: none;
+}
+
+.language-container {
+    height: 60px;
+    display: grid;
+    grid-template-rows: 120px 60px;
+    grid-template-columns: 60px;
+}
+
+.language-auswahl {
+    color: white;
+    grid-template-rows: 40px 80px;
+    grid-template-columns: 60px;
+    justify-items: center;
+    align-items: center;
+    visibility: hidden;
+    display: grid;
+}
+
+.language-aktuell-container {
+    background-color:#686868de;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    transition: 200ms ease-in-out;
+}
+
+.language-aktuell-container p {
+    font-size: 18px;
+}
+
+.language p {
+    color: white;
+
+}
+
+.language-auswahl p {
+    font-size: 12px;
+}
+
+.language-auswahl-link {
+    background-color:#686868de;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: 200ms ease-in-out;
+    transition-property: background-color;
+}
+
+.language-auswahl-link:hover {
+    background-color: #ddd2d2ea;
+}
+
+.language-auswahl-link:hover p {
+    color: #686868;
+}
+
+.language-container:hover .language-auswahl{
+    visibility: visible;
+}
+
+.language-container:hover {
+    outline: 0;
+}
+
+.language-aktuell-container:hover {
+    background-color: #ddd2d2ea;
+}
+
+.language-aktuell-container:hover p {
+    color: #686868;
+}
 /*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
 
 body {
@@ -49,33 +170,6 @@ p {
 }
 
 /************************* RICHTIGER CODE ******************************************/
-
-/************************* Home Button **********************************/ 
-.home-button {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: #686868a1;
-    position: fixed;
-    top: 85%;
-    left: 2%;
-    z-index: 10;
-    opacity: 1;
-    transition: 250ms ease-in-out;
-}
-
-.home-button:hover {
-    transform: rotate(180deg);
-    background-color: #ddd2d2;;
-}
-
-.home-button i {
-    color: white;
-    font-size: 250%;
-    position: relative;
-    left: 29%;
-    top: 29%;
-}
 
 /************************* Navigation Bereich *************************************/
 nav {
@@ -219,13 +313,13 @@ header {
 .hero-zimmer-container {
     position: relative;
     top: 30%;
-    left: 50%;
     height: 300px;
     width: 600px;
     background-color: #f7f7f7;
     -webkit-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
+    margin: 0% 5%;
 }
 
 .hero-zimmer-text {
@@ -558,3 +652,114 @@ height:auto;
 .left-area-footer-links a:hover::after {
     transform: scaleX(1);
 }
+
+/************************ ANPASSUNGEN *************************/
+@media only screen and (max-width: 1000px) {
+    .zimmer-area {
+        height: 2300px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .zimmer-area-text-2::before {
+        visibility: hidden;
+    }
+
+footer {
+    height: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: none;
+}
+
+.footer-mobile {
+    display: block;
+}
+
+.footer-mobile-top {
+    padding: 10% 0% 0% 0%;
+}
+
+.footer-mobile-button h3{
+    font-size: 5vh;
+    color: #cf9a68;
+}
+
+.footer-mobile-button button {
+    width: 100%;
+    border: 1px solid black;
+    font-size: 22px;
+    padding: 5%;
+    margin: 10% 0%;
+}
+
+footer a {
+    width: 100%;
+}
+
+.footer-mobile-button {
+    padding: 0% 2%;
+}
+
+.footer-mobile-links li{
+    padding: 5% 0%;
+}
+
+.right-area-footer-2, .left-area-footer-2 {
+    margin: 0;
+}
+
+}
+
+@media only screen and (max-width: 650px) {
+    footer {
+        height: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footer-container {
+        display: none;
+    }
+    
+    .footer-mobile {
+        display: block;
+    }
+    
+    .footer-mobile-top {
+        padding: 10% 0% 0% 0%;
+    }
+    
+    .footer-mobile-button h3{
+        font-size: 5vh;
+        color: #cf9a68;
+    }
+    
+    .footer-mobile-button button {
+        width: 100%;
+        border: 1px solid black;
+        font-size: 22px;
+        padding: 5%;
+        margin: 20% 0%;
+    }
+    
+    footer a {
+        width: 100%;
+    }
+    
+    .footer-mobile-button {
+        padding: 0% 2%;
+    }
+    
+    .footer-mobile-links li{
+        padding: 5% 0%;
+    }
+    
+    .right-area-footer-2, .left-area-footer-2 {
+        margin: 0;
+    }
+    
+    }

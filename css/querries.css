@@ -388,6 +388,7 @@
         width: 100%;
         height: 400px;
         text-align: center;
+        margin: 0;
     }
 
     .hero-zimmer-container h3 {
@@ -401,7 +402,7 @@
     }
 
     .zimmer-area {
-        height: 330vh;
+        height: 425vh;
     }
 
     .zimmer-area p {
@@ -607,7 +608,7 @@
 
     /******************************************* ZIMMER HTML CODE!!!***********************************/
     .zimmer-area {
-        height: 350vh;
+        height: 440vh;
     }
 
 }
