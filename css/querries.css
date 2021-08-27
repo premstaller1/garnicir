@@ -1,4 +1,21 @@
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 1600px) {
+    .zimmer {
+        height: 1750px;
+    }
+    
+    
+@media only screen and (max-width: 1400px) {
+    .zimmer {
+        height: 1600px;
+    }
+
+@media only screen and (max-width: 1000px) {
+    .zimmer {
+        height: 1300px;
+    }
+
+
+@media only screen and (max-width: 900px) {
 
     nav:hover {
         padding: 0%;
@@ -245,6 +262,10 @@
         display: none;
     }
 
+    /** Language Area **************************************/
+    .language {
+        top: 62%
+    }
 
 
     /* Zimmer Area ****************************************/
@@ -551,6 +572,10 @@
         text-align: center;
     }
 
+    .item-2-verstecken {
+        visibility: hidden;
+    }
+
     
     /******************* Footer Area ************************/
 
@@ -622,7 +647,7 @@
 @media only screen and (max-width: 660px){
     .logo-img {
         width: 25%;
-        left: 30%;
+        left: 40%;
     }
 }
 

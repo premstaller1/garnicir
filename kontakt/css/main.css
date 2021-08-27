@@ -477,7 +477,7 @@ input[readonly].datetime-picker {
   box-sizing: border-box;
 }
 body {
-  background: url(/Ressourcen/berg&zimmer-img/Sacun_cun_Saslonch_Gherdëina.jpg) no-repeat center bottom fixed;
+  background: url(/Ressourcen/background.jpg) no-repeat center bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

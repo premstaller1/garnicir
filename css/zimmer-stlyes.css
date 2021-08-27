@@ -41,7 +41,7 @@
 .language {
     color: white;
     position: fixed;
-    top: 57%;
+    top: 62%;
     left: 2%;
     z-index: 100;
     height: 60px;
@@ -131,7 +131,7 @@ body {
     font-family: 'Comfortaa', cursive;
     color: rgb(68, 65, 65);
     background-color: #ddd2d2;
-    background-image: url(/Ressourcen/berg&zimmer-img/alpedisuisi\ winter\ 2.jpg);
+    background-image: url(/Ressourcen/background-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -363,7 +363,7 @@ header {
 .zimmer-area-img-container {
     max-width:100%;
     max-height:100%;
-    background-image: url(/Ressourcen/berg&zimmer-img/IMG_4096.jpg);
+    background-image: url(/Ressourcen/single-room.jpg);
     width: auto;
     height: 500px;
     background-size: cover;
@@ -461,7 +461,7 @@ header {
 .zimmer-area-img-container-2 {
     max-width:100%;
     max-height:100%;
-    background-image: url(/Ressourcen/berg&zimmer-img/IMG_4069.jpg);
+    background-image: url(/Ressourcen/double-room.jpg);
     width: auto;
     height: 500px;
     background-size: cover;
@@ -486,7 +486,7 @@ header {
 .zimmer-area-img-container-3 {
     max-width:100%;
     max-height:100%;
-    background-image: url(/Ressourcen/berg&zimmer-img/IMG_4023.jpg);
+    background-image: url(/Ressourcen/special-room.jpg);
     width: auto;
     height: 500px;
     background-size: cover;
@@ -654,16 +654,19 @@ height:auto;
 }
 
 /************************ ANPASSUNGEN *************************/
-@media only screen and (max-width: 1000px) {
-    .zimmer-area {
-        height: 2300px;
-    }
+
+@media only screen and (max-width: 900px) {
+.zimmer-area-text-2::before {
+    visibility: hidden;
 }
 
-@media only screen and (max-width: 840px) {
-    .zimmer-area-text-2::before {
-        visibility: hidden;
-    }
+#zimmer {
+    height: 2600px;
+}
+
+.language {
+    top: 57%;
+}
 
 footer {
     height: 100%;
@@ -763,3 +766,15 @@ footer a {
     }
     
     }
+
+@media only screen and (max-width: 460px) {
+    #zimmer {
+        height: 2800px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #zimmer {
+        height: 3000px;
+    }
+}
