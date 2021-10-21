@@ -29,7 +29,7 @@
     }
 
     header {
-        background-image: url(/Ressourcen/berg&zimmer-img/sommerurlaub-seiser-alm-suedtirol.jpg);
+        background-image: url(/Ressourcen/garten.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -232,7 +232,7 @@
 
     
     .about-us-image div {
-        background-image: url(/Ressourcen/berg&zimmer-img/valgardena.it.jpg);
+        background-image: url(/Ressourcen/valgardena.it.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -263,9 +263,6 @@
     }
 
     /** Language Area **************************************/
-    .language {
-        top: 62%
-    }
 
 
     /* Zimmer Area ****************************************/
@@ -420,6 +417,7 @@
     .hero-zimmer-container a {
         padding: 5%;
         border: 1px solid black;
+        font-size: 14px;
     }
 
     .zimmer-area {
@@ -664,4 +662,21 @@
         left: 30%;
     }
 }
-    
+
+@media only screen and (max-height: 700px) {
+    .language {
+        top: 49%;
+    }
+}
+
+@media only screen and (max-height: 530px) {
+    .language {
+        top: 45%;
+    }
+}
+
+@media only screen and (min-height: 700px) {
+    .language {
+        top: 55%;
+    }
+}

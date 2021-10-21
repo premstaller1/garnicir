@@ -664,10 +664,6 @@ height:auto;
     height: 2600px;
 }
 
-.language {
-    top: 57%;
-}
-
 footer {
     height: 100%;
     padding: 0;
@@ -771,6 +767,7 @@ footer a {
     #zimmer {
         height: 2800px;
     }
+
 }
 
 @media only screen and (max-width: 350px) {
