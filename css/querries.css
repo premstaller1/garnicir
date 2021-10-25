@@ -2,20 +2,20 @@
     .zimmer {
         height: 1750px;
     }
-    
+}    
     
 @media only screen and (max-width: 1400px) {
     .zimmer {
         height: 1600px;
     }
-
+}
 @media only screen and (max-width: 1000px) {
     .zimmer {
         height: 1300px;
     }
+}
 
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 960px) {
 
     nav:hover {
         padding: 0%;
@@ -660,23 +660,5 @@
     .logo-img {
         width: 40%;
         left: 30%;
-    }
-}
-
-@media only screen and (max-height: 700px) {
-    .language {
-        top: 49%;
-    }
-}
-
-@media only screen and (max-height: 530px) {
-    .language {
-        top: 45%;
-    }
-}
-
-@media only screen and (min-height: 700px) {
-    .language {
-        top: 55%;
     }
 }
