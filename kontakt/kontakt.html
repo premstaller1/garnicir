@@ -1,142 +1,128 @@
-<!DOCTYPE html>
- <html class="no-js"> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hotel Reservation Form</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/Kontakt/css_kontakt/css/normalize.css">
-        <link rel="stylesheet" href="/Kontakt/css_kontakt/css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFR7X6KBXY"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-MFR7X6KBXY');
-        </script>
-
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16/favicon-16x16.png">
-        <link rel="manifest" href="/favicon_package_v0.16/site.webmanifest">
-        <link rel="mask-icon" href="/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-
-    </head>
-    <body>
-
-
-
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <!-- Add your site or application content here -->
-        <form id="booking-form" class="booking-form" name="form1" method="post" action="">
-            <a href="/index.html">
-                <div class="return-button">
-                    <i class="fas fa-home"></i>
-                </div>
-            </a>
-            <div><img class="logo" src="img/logo-1.png" title="Example Logo" alt="Example Logo"></div>
-            <div class="h1">We are excited to meet you!</div>
-            <div id="form-message" class="message hide">
-                Thank you for your enquiry!
-            </div>
-            <div id="form-content">
-                <div class="group">
-                    <label for="date-from">From</label>
-                    <div class="addon-right">
-                        <input id="date-from" name="date-from" class="form-control" type="text">
-                        <i class="fa fa-calendar"></i>
-                    </div>
-                </div>
-                <div class="group">
-                    <label for="date-to">To</label>
-                    <div class="addon-right">
-                        <input id="date-to" name="date-to" class="form-control" type="text">
-                        <i class="fa fa-calendar"></i>
-                    </div>
-                </div>
-                <div class="group">
-                    <label for="room-type">Room type</label>
-                    <div>
-                        <select id="room-type" name="room-type" class="form-control">
-                            <option value="Single room">Single room</option>
-                            <option value="Double room">Double room</option>
-                            <option value="Apartment">Special Room</option>
-                        </select>
-                    </div>
-                </div>
-             
-                
-                
-                <div class="group">
-                    <label for="adults">Adults</label>
-                    <div>
-                        <select id="adults" name="adults" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10+">More than 9 People <strong><italic>(please include exact number in the message field below)</italic></strong></option>
-                        </select>
-                    </div>
-                </div>
-                <div class="group">
-                    <label for="children">Children</label>
-                    <div>
-                        <select id="children" name="children" class="form-control">
-                            <option value="-">-</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4+">More than 3 People <strong><italic>(please include exact number in the message field below)</italic></strong></option>
-                        </select>
-                    </div>
-                </div>
-                <div class="group">
-                    <label for="name">Name</label>
-                    <div><input id="name" name="name" class="form-control" type="text" placeholder="Name"></div>
-                </div>
-                <div class="group">
-                    <label for="email">Email</label>
-                    <div><input id="email" name="email" class="form-control" type="email" placeholder="Email"></div>
-                </div>
-                <div class="group">
-                    <label for="phone">Phone</label>
-                    <div><input id="phone" name="phone" class="form-control" type="text" placeholder="Phone"></div>
-                </div>
-                <div class="group">
-                    <label for="special-requirements">Special requirements</label>
-                    <div><textarea id="special-requirements" name="special-requirements" class="form-control" cols="" rows="5" placeholder="Special requirements"></textarea></div>
-                </div>
-                <div class="group submit">
-                    <label class="empty"></label>
-                    <div><input name="submit" type="submit" value="Submit"/></div>
-                </div>
-            </div>
-            <div id="form-loading" class="hide"><i class="fa fa-circle-o-notch fa-spin"></i></div>
-        </form>
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>     
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-</html>
+<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hotel Reservation Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/Kontakt/css_kontakt/css/normalize.css">
+        <link rel="stylesheet" href="/Kontakt/css_kontakt/css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFR7X6KBXY"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MFR7X6KBXY');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16/favicon-16x16.png">
+        <link rel="manifest" href="/favicon_package_v0.16/site.webmanifest">
+        <link rel="mask-icon" href="/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <form id="booking-form" class="booking-form" name="form1" method="post" action="">
+            <a href="/index.html">
+                <div class="return-button">
+                    <i class="fas fa-home"></i>
+                </div>
+            </a>
+            <div><img class="logo" src="img/logo-1.png" title="Example Logo" alt="Example Logo"></div>
+            <div class="h1">We are excited to meet you!</div>
+            <div id="form-message" class="message hide">
+                Thank you for your enquiry!
+            </div>
+            <div id="form-content">
+                <div class="group">
+                    <label for="date-from">From</label>
+                    <div class="addon-right">
+                        <input id="date-from" name="date-from" class="form-control" type="text">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="date-to">To</label>
+                    <div class="addon-right">
+                        <input id="date-to" name="date-to" class="form-control" type="text">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="room-type">Room type</label>
+                    <div>
+                        <select id="room-type" name="room-type" class="form-control">
+                            <option value="Single room">Single room</option>
+                            <option value="Double room">Double room</option>
+                            <option value="Apartment">Special Room</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="adults">Adults</label>
+                    <div>
+                        <select id="adults" name="adults" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10+">More than 9 People <strong><italic>(please include exact number in the message field below)</italic></strong></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="children">Children</label>
+                    <div>
+                        <select id="children" name="children" class="form-control">
+                            <option value="-">-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4+">More than 3 People <strong><italic>(please include exact number in the message field below)</italic></strong></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="name">Name</label>
+                    <div><input id="name" name="name" class="form-control" type="text" placeholder="Name"></div>
+                </div>
+                <div class="group">
+                    <label for="email">Email</label>
+                    <div><input id="email" name="email" class="form-control" type="email" placeholder="Email"></div>
+                </div>
+                <div class="group">
+                    <label for="phone">Phone</label>
+                    <div><input id="phone" name="phone" class="form-control" type="text" placeholder="Phone"></div>
+                </div>
+                <div class="group">
+                    <label for="special-requirements">Special requirements</label>
+                    <div><textarea id="special-requirements" name="special-requirements" class="form-control" cols="" rows="5" placeholder="Special requirements"></textarea></div>
+                </div>
+                <div class="group submit">
+                    <label class="empty"></label>
+                    <div><input name="submit" type="submit" value="Submit"/></div>
+                </div>
+            </div>
+            <div id="form-loading" class="hide"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+        </form>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
