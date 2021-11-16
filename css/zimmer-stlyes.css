@@ -1,777 +1,745 @@
-/****** Allgemeine Settings *****/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.home-button {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: #686868ea;
-    position: fixed;
-    top: 85%;
-    left: 2%;
-    z-index: 10;
-    opacity: 1;
-    transition: 450ms ease-in-out;
-}
-
-.home-button:hover {
-    transform: rotate(360deg);
-    background-color: #ddd2d2;
-}
-
-.home-button:hover i {
-    color: #686868ea;
-}
-
-.home-button i {
-    color: white;
-    font-size: 250%;
-    position: relative;
-    left: 29%;
-    top: 29%;
-    transition: 150ms;
-}
-
-/*** Language Button ****/
-
-.language {
-    color: white;
-    position: fixed;
-    bottom: 21.4%;
-    right: 2%;
-    z-index: 100;
-    height: 60px;
-    outline: none;
-}
-
-.language-container {
-    height: 60px;
-    display: grid;
-    grid-template-rows: 120px 60px;
-    grid-template-columns: 60px;
-}
-
-.language-auswahl {
-    color: white;
-    grid-template-rows: 40px 80px;
-    grid-template-columns: 60px;
-    justify-items: center;
-    align-items: center;
-    visibility: hidden;
-    display: grid;
-}
-
-.language-aktuell-container {
-    background-color:#686868de;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 60px;
-    width: 60px;
-    transition: 200ms ease-in-out;
-}
-
-.language-aktuell-container p {
-    font-size: 18px;
-}
-
-.language p {
-    color: white;
-
-}
-
-.language-auswahl p {
-    font-size: 12px;
-}
-
-.language-auswahl-link {
-    background-color:#686868de;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    transition: 200ms ease-in-out;
-    transition-property: background-color;
-}
-
-.language-auswahl-link:hover {
-    background-color: #ddd2d2ea;
-}
-
-.language-auswahl-link:hover p {
-    color: #686868;
-}
-
-.language-container:hover .language-auswahl{
-    visibility: visible;
-}
-
-.language-container:hover {
-    outline: 0;
-}
-
-.language-aktuell-container:hover {
-    background-color: #ddd2d2ea;
-}
-
-.language-aktuell-container:hover p {
-    color: #686868;
-}
-/*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
-
-body {
-    font-family: 'Comfortaa', cursive;
-    color: rgb(68, 65, 65);
-    background-color: #ddd2d2;
-    background-image: url(/Ressourcen/background-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-h3 {
-    font-family: 'Petit Formal Script', cursive;
-    color: #cf9a68
-}
-
-html {
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(68, 65, 65)
-}
-
-li {
-    list-style: none;
-}
-
-button {
-    border: 0px;
-    background-color: transparent;
-}
-
-p {
-    font-size: 18px;
-}
-
-.toggler {
-    display: none;
-}
-
-/************************* RICHTIGER CODE ******************************************/
-
-/************************* Navigation Bereich *************************************/
-nav {
-    display: flex;
-    position: fixed;
-    padding: 1% 10%;
-    background-color: #ddd2d2;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 6;
-    width: 100%;
-    transition: 200ms ease;
-}
-
-nav:hover {
-    padding: 2% 10%;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    
-}
-
-.logo-nav-left {
-    margin: auto 0px;
-}
-
-.list-nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.list-nav li {
-    position: relative;
-}
-
-.list-nav-right ul {
-    display: flex;
-    align-items: center;
-}
-
-.list-nav-right li {
-    margin: 19px;
-    transition: background-color 250ms ease-in-out;
-    font-size: 16px;
-}
-
-.logo-nav-left a {
-    font-size: 25px;
-}
-
-
-.list-nav li:hover::after {
-    transform: scaleX(1);
-}
-
-.list-nav li::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 110%;
-    width: 100%;
-    height: 1px;
-    background-color: currentColor;
-
-    transform: scaleX(.1);
-    transform-origin: left;
-    transition: transform 250ms ease-in-out;
-}
-
-.list-nav-button button {
-    background-color: rgba(255, 255, 255, 0.432);
-    border: 1px solid black;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    color: rgb(68, 65, 65);
-    position: relative;
-    z-index: 1;
-    transition: color 300ms ease-in-out;
-}
-
-.list-nav-button button::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    top: -1px;
-    left: -1px;
-    border: 1px solid black;
-    transform: scaleX(.0);
-    transform-origin: left;
-    z-index: -1;
-    transition: transform 400ms ease-in-out;
-}
-
-.list-nav-button button:hover::after {
-    transform: scaleX(1);
-    transform-origin: right;
-
-}
-
-.list-nav-button button:hover {
-    color: white;
-}
-
-.button-nav-link {
-    margin-left: 22px;
-}
-
-.toggler {
-    display: none;
-}
-
-.logo-img {
-    max-height: 100%;
-    width: 100%;
-}
-
-.logo-placeholder {
-    position: fixed;
-    left: 10%;
-    z-index: 8;
-    width: 10%;
-    background-color: #ddd2d2;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-}
-
-.logo-placeholder:hover {
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
-}
-
-/************************* Hero-text Bereich *************************************/
-header {
-    height: 730px;
-}
-.hero-zimmer-container {
-    position: relative;
-    top: 30%;
-    height: 300px;
-    width: 600px;
-    background-color: #f7f7f7;
-    -webkit-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
-    margin: 0% 5%;
-}
-
-.hero-zimmer-text {
-    width: 100%;
-    height: 100%;
-    border: 2px solid gray;
-    padding: 10%;
-}
-
-.hero-zimmer-text h3 {
-    font-size: 3rem;
-    line-height: 170%;
-}
-
-.hero-zimmer-text a {
-    border-bottom: 1px solid gray;
-}
-
-/************************* Zimmer Bereich *************************************/
-
-/************** Zimmer-1 Bereich *********************/
-.zimmer-area {
-    height: 2190px;
-    width: 100%;
-    background-color: #f7f7f7;
-}
-
-.zimmer-container-1 {
-    width: 100%;
-    height: 730px;
-    display: flex;
-    justify-content: space-around;
-    padding: 10%;
-}
-
-.zimmer-area-img {
-    width: 65%;
-    padding: 0% 5%;
-}
-
-.zimmer-area-img-container {
-    max-width:100%;
-    max-height:100%;
-    background-image: url(/Ressourcen/single-room.jpg);
-    width: auto;
-    height: 500px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    display: block;
-    z-index: 1;
-}
-
-.zimmer-area-text {
-    height: 100%;
-    width: 35%;
-    padding: 0% 5%;
-    position: relative;
-}
-
-.zimmer-area-text p {
-    padding: 5% 0%;
-}
-
-.zimmer-area-text h3 {
-    font-size: 2.3rem;
-    padding-bottom: 5%;
-}
-
-.zimmer-area-text::before {
-    content: '';
-    width: 2px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.562);
-    position: absolute;
-    display: inline-block;
-    right: 100%;
-}
-
-.zimmer-area-text::after {
-    content: '';
-    width: 500px;
-    height: 350px;
-    background-color: rgba(155, 143, 143, 0.349);
-    position: absolute;
-    display: inline-block;
-    right: 90%;
-    bottom: 30%;
-}
-
-/************** Zimmer-2 Bereich *********************/
-
-.zimmer-container-2 {
-    width: 100%;
-    height: 730px;
-    display: flex;
-    justify-content: space-around;
-    padding: 10%;
-}
-
-.zimmer-area-text-2 {
-    height: 100%;
-    width: 35%;
-    padding: 0% 5%;
-    position: relative;
-}
-
-.zimmer-area-text-2 p {
-    padding: 5% 0%;
-}
-
-.zimmer-area-text-2 h3 {
-    font-size: 2.3rem;
-    padding-bottom: 5%;
-}
-
-.zimmer-area-text-2::before {
-    content: '';
-    width: 2px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.562);
-    position: absolute;
-    display: inline-block;
-    left: 100%;
-}
-
-.zimmer-area-text-2::after {
-    content: '';
-    width: 500px;
-    height: 350px;
-    background-color: rgba(155, 143, 143, 0.349);
-    position: absolute;
-    display: inline-block;
-    left: 90%;
-    bottom: 30%;
-}
-
-.zimmer-area-img-container-2 {
-    max-width:100%;
-    max-height:100%;
-    background-image: url(/Ressourcen/double-room.jpg);
-    width: auto;
-    height: 500px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    display: block;
-    z-index: 1;
-}
-
-
-/************** Zimmer-3 Bereich *********************/
-
-.zimmer-container-3 {
-    width: 100%;
-    height: 730px;
-    display: flex;
-    justify-content: space-around;
-    padding: 10%;
-}
-
-.zimmer-area-img-container-3 {
-    max-width:100%;
-    max-height:100%;
-    background-image: url(/Ressourcen/special-room.jpg);
-    width: auto;
-    height: 500px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    display: block;
-    z-index: 1;
-}
-
-/******************************** Footer Bereich ************************************************/
-
-footer {
-    height: 500px;
-    width: 100%;
-    background-color: #f7f7f7;
-    padding: 3% 10%;
-    border-top: 2px solid rgb(165, 165, 165);
-}
-
-footer a {
-    cursor: pointer;
-}
-
-footer button {
-    cursor: pointer;
-}
-
-.footer-container {
-    width: 100%;
-    height: auto;
-}
-
-.footer-top-area {
-display: flex;
-justify-content: space-evenly;
-width: 100%;
-height:auto;
-}
-
-.left-area-footer {
-    width: 40%;
-}
-
-.right-area-footer {
-    width: 40%;
-}
-
-.right-area-footer-links,
-.left-area-footer-links {
-    text-align: center;
-}
-
-.right-area-footer-2,
-.left-area-footer-2 {
-    margin: 30px 0px;
-}
-
-.middle-area-footer {
-    font-size: 230%;
-    width: 20%;
-}
-
-.footer-icons {
-    text-align: center;
-    padding-bottom: 40%;
-    border-bottom: 1px solid rgb(160, 156, 156);
-}
-
-.fa-instagram {
-    padding-right: 5%;
-}
-
-.fa-facebook {
-    padding-left: 5%;
-}
-
-.middle-area-footer a {
-    text-align: center;
-}
-
-.footer-book-button {
-    text-align: center;
-    height: 40%;
-    padding-top: 25%;
-}
-
-.footer-book-button h3 {
-    font-size: 2.1rem;
-    padding-bottom: 10%;
-}
-
-.footer-book-button button {
-    padding: 14px 50px;
-    border: 1px solid black;
-    font-size: 22px;
-    position: relative;
-    z-index: 1;
-    transition: all 400ms ease-in-out;
-}
-
-.footer-book-button button::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    top: -1px;
-    left: -1px;
-    border: 1px solid black;
-    transform: scaleX(.0);
-    transform-origin: center;
-    z-index: -1;
-    transition: transform 400ms ease-in-out;
-}
-
-.footer-book-button button:hover::after {
-    transform: scaleX(1);
-}
-
-.footer-book-button button:hover {
-    color: white;
-}
-
-.footer-mobile {
-    display: none;
-}
-
-.right-area-footer-links a,
-.left-area-footer-links a {
-    position: relative;
-}
-
-.left-area-footer a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 110%;
-    width: 100%;
-    height: 1px;
-    background-color: currentColor;
-
-    transform: scaleX(.1);
-    transform-origin: left;
-    transition: transform 250ms ease-in-out;
-}
-
-.right-area-footer-links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 110%;
-    width: 100%;
-    height: 1px;
-    background-color: currentColor;
-
-    transform: scaleX(.1);
-    transform-origin: left;
-    transition: transform 250ms ease-in-out;
-}
-
-.right-area-footer-links a:hover::after,
-.left-area-footer-links a:hover::after {
-    transform: scaleX(1);
-}
-
-/************************ ANPASSUNGEN *************************/
-
-@media only screen and (max-width: 900px) {
-.zimmer-area-text-2::before {
-    visibility: hidden;
-}
-
-#zimmer {
-    height: 2600px;
-}
-
-footer {
-    height: 100%;
-    padding: 0;
-    text-align: center;
-}
-
-.footer-container {
-    display: none;
-}
-
-.footer-mobile {
-    display: block;
-}
-
-.footer-mobile-top {
-    padding: 10% 0% 0% 0%;
-}
-
-.footer-mobile-button h3{
-    font-size: 5vh;
-    color: #cf9a68;
-}
-
-.footer-mobile-button button {
-    width: 100%;
-    border: 1px solid black;
-    font-size: 22px;
-    padding: 5%;
-    margin: 10% 0%;
-}
-
-footer a {
-    width: 100%;
-}
-
-.footer-mobile-button {
-    padding: 0% 2%;
-}
-
-.footer-mobile-links li{
-    padding: 5% 0%;
-}
-
-.right-area-footer-2, .left-area-footer-2 {
-    margin: 0;
-}
-
-}
-
-@media only screen and (max-width: 650px) {
-    footer {
-        height: 100%;
-        padding: 0;
-        text-align: center;
-    }
-    
-    .footer-container {
-        display: none;
-    }
-    
-    .footer-mobile {
-        display: block;
-    }
-    
-    .footer-mobile-top {
-        padding: 10% 0% 0% 0%;
-    }
-    
-    .footer-mobile-button h3{
-        font-size: 5vh;
-        color: #cf9a68;
-    }
-    
-    .footer-mobile-button button {
-        width: 100%;
-        border: 1px solid black;
-        font-size: 22px;
-        padding: 5%;
-        margin: 20% 0%;
-    }
-    
-    footer a {
-        width: 100%;
-    }
-    
-    .footer-mobile-button {
-        padding: 0% 2%;
-    }
-    
-    .footer-mobile-links li{
-        padding: 5% 0%;
-    }
-    
-    .right-area-footer-2, .left-area-footer-2 {
-        margin: 0;
-    }
-    
-    }
-
-@media only screen and (max-width: 460px) {
-    #zimmer {
-        height: 2800px;
-    }
-
-}
-
-@media only screen and (max-width: 350px) {
-    #zimmer {
-        height: 3000px;
-    }
+/****** Allgemeine Settings *****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*** Language Button ****/
+
+.language {
+    color: white;
+    position: fixed;
+    bottom: 21.4%;
+    right: 2%;
+    z-index: 100;
+    height: 60px;
+    outline: none;
+}
+
+.language-container {
+    height: 60px;
+    display: grid;
+    grid-template-rows: 120px 60px;
+    grid-template-columns: 60px;
+}
+
+.language-auswahl {
+    color: white;
+    grid-template-rows: 40px 80px;
+    grid-template-columns: 60px;
+    justify-items: center;
+    align-items: center;
+    visibility: hidden;
+    display: grid;
+}
+
+.language-aktuell-container {
+    background-color:#686868de;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    transition: 200ms ease-in-out;
+}
+
+.language-aktuell-container p {
+    font-size: 18px;
+}
+
+.language p {
+    color: white;
+
+}
+
+.language-auswahl p {
+    font-size: 12px;
+}
+
+.language-auswahl-link {
+    background-color:#686868de;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: 200ms ease-in-out;
+    transition-property: background-color;
+}
+
+.language-auswahl-link:hover {
+    background-color: #ddd2d2ea;
+}
+
+.language-auswahl-link:hover p {
+    color: #686868;
+}
+
+.language-container:hover .language-auswahl{
+    visibility: visible;
+}
+
+.language-container:hover {
+    outline: 0;
+}
+
+.language-aktuell-container:hover {
+    background-color: #ddd2d2ea;
+}
+
+.language-aktuell-container:hover p {
+    color: #686868;
+}
+/*** Font Family variert nach property --> h3 ist cursive, für spezielle sachen ***/
+
+body {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(68, 65, 65);
+    background-color: #ddd2d2;
+    background-image: url(/Ressourcen/background-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h3 {
+    font-family: 'Petit Formal Script', cursive;
+    color: #cf9a68
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(68, 65, 65)
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: 0px;
+    background-color: transparent;
+}
+
+p {
+    font-size: 18px;
+}
+
+.toggler {
+    display: none;
+}
+
+/************************* RICHTIGER CODE ******************************************/
+
+/************************* Navigation Bereich *************************************/
+nav {
+    display: flex;
+    position: fixed;
+    padding: 1% 10%;
+    background-color: #ddd2d2;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+    width: 100%;
+    transition: 200ms ease;
+}
+
+nav:hover {
+    padding: 2% 10%;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    
+}
+
+.logo-nav-left {
+    margin: auto 0px;
+}
+
+.list-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.list-nav li {
+    position: relative;
+}
+
+.list-nav-right ul {
+    display: flex;
+    align-items: center;
+}
+
+.list-nav-right li {
+    margin: 19px;
+    transition: background-color 250ms ease-in-out;
+    font-size: 16px;
+}
+
+.logo-nav-left a {
+    font-size: 25px;
+}
+
+
+.list-nav li:hover::after {
+    transform: scaleX(1);
+}
+
+.list-nav li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+
+    transform: scaleX(.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.list-nav-button button {
+    background-color: rgba(255, 255, 255, 0.432);
+    border: 1px solid black;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(68, 65, 65);
+    position: relative;
+    z-index: 1;
+    transition: color 300ms ease-in-out;
+}
+
+.list-nav-button button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: -1px;
+    left: -1px;
+    border: 1px solid black;
+    transform: scaleX(.0);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 400ms ease-in-out;
+}
+
+.list-nav-button button:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+
+}
+
+.list-nav-button button:hover {
+    color: white;
+}
+
+.button-nav-link {
+    margin-left: 22px;
+}
+
+.toggler {
+    display: none;
+}
+
+.logo-img {
+    max-height: 100%;
+    width: 100%;
+}
+
+.logo-placeholder {
+    position: fixed;
+    left: 10%;
+    z-index: 8;
+    width: 10%;
+    background-color: #ddd2d2;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+.logo-placeholder:hover {
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+}
+
+/************************* Hero-text Bereich *************************************/
+header {
+    height: 730px;
+}
+.hero-zimmer-container {
+    position: relative;
+    top: 30%;
+    height: 300px;
+    width: 600px;
+    background-color: #f7f7f7;
+    -webkit-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.75);
+    margin: 0% 5%;
+}
+
+.hero-zimmer-text {
+    width: 100%;
+    height: 100%;
+    border: 2px solid gray;
+    padding: 10%;
+}
+
+.hero-zimmer-text h3 {
+    font-size: 3rem;
+    line-height: 170%;
+}
+
+.hero-zimmer-text a {
+    border-bottom: 1px solid gray;
+}
+
+/************************* Zimmer Bereich *************************************/
+
+/************** Zimmer-1 Bereich *********************/
+.zimmer-area {
+    height: 2190px;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.zimmer-container-1 {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10%;
+}
+
+.zimmer-area-img {
+    width: 65%;
+    padding: 0% 5%;
+}
+
+.zimmer-area-img-container {
+    max-width:100%;
+    max-height:100%;
+    background-image: url(/Ressourcen/single-room.jpg);
+    width: auto;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.zimmer-area-text {
+    height: 100%;
+    width: 35%;
+    padding: 0% 5%;
+    position: relative;
+}
+
+.zimmer-area-text p {
+    padding: 5% 0%;
+}
+
+.zimmer-area-text h3 {
+    font-size: 2.3rem;
+    padding-bottom: 5%;
+}
+
+.zimmer-area-text::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
+    position: absolute;
+    display: inline-block;
+    right: 100%;
+}
+
+.zimmer-area-text::after {
+    content: '';
+    width: 500px;
+    height: 350px;
+    background-color: rgba(155, 143, 143, 0.349);
+    position: absolute;
+    display: inline-block;
+    right: 90%;
+    bottom: 30%;
+}
+
+/************** Zimmer-2 Bereich *********************/
+
+.zimmer-container-2 {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10%;
+}
+
+.zimmer-area-text-2 {
+    height: 100%;
+    width: 35%;
+    padding: 0% 5%;
+    position: relative;
+}
+
+.zimmer-area-text-2 p {
+    padding: 5% 0%;
+}
+
+.zimmer-area-text-2 h3 {
+    font-size: 2.3rem;
+    padding-bottom: 5%;
+}
+
+.zimmer-area-text-2::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
+    position: absolute;
+    display: inline-block;
+    left: 100%;
+}
+
+.zimmer-area-text-2::after {
+    content: '';
+    width: 500px;
+    height: 350px;
+    background-color: rgba(155, 143, 143, 0.349);
+    position: absolute;
+    display: inline-block;
+    left: 90%;
+    bottom: 30%;
+}
+
+.zimmer-area-img-container-2 {
+    max-width:100%;
+    max-height:100%;
+    background-image: url(/Ressourcen/double-room.jpg);
+    width: auto;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+
+/************** Zimmer-3 Bereich *********************/
+
+.zimmer-container-3 {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10%;
+}
+
+.zimmer-area-img-container-3 {
+    max-width:100%;
+    max-height:100%;
+    background-image: url(/Ressourcen/special-room.jpg);
+    width: auto;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+/******************************** Footer Bereich ************************************************/
+
+footer {
+    height: 500px;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 3% 10%;
+    border-top: 2px solid rgb(165, 165, 165);
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer button {
+    cursor: pointer;
+}
+
+.footer-container {
+    width: 100%;
+    height: auto;
+}
+
+.footer-top-area {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+height:auto;
+}
+
+.left-area-footer {
+    width: 40%;
+}
+
+.right-area-footer {
+    width: 40%;
+}
+
+.right-area-footer-links,
+.left-area-footer-links {
+    text-align: center;
+}
+
+.right-area-footer-2,
+.left-area-footer-2 {
+    margin: 30px 0px;
+}
+
+.middle-area-footer {
+    font-size: 230%;
+    width: 20%;
+}
+
+.footer-icons {
+    text-align: center;
+    padding-bottom: 40%;
+    border-bottom: 1px solid rgb(160, 156, 156);
+}
+
+.fa-instagram {
+    padding-right: 5%;
+}
+
+.fa-facebook {
+    padding-left: 5%;
+}
+
+.middle-area-footer a {
+    text-align: center;
+}
+
+.footer-book-button {
+    text-align: center;
+    height: 40%;
+    padding-top: 25%;
+}
+
+.footer-book-button h3 {
+    font-size: 2.1rem;
+    padding-bottom: 10%;
+}
+
+.footer-book-button button {
+    padding: 14px 50px;
+    border: 1px solid black;
+    font-size: 22px;
+    position: relative;
+    z-index: 1;
+    transition: all 400ms ease-in-out;
+}
+
+.footer-book-button button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: -1px;
+    left: -1px;
+    border: 1px solid black;
+    transform: scaleX(.0);
+    transform-origin: center;
+    z-index: -1;
+    transition: transform 400ms ease-in-out;
+}
+
+.footer-book-button button:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-book-button button:hover {
+    color: white;
+}
+
+.footer-mobile {
+    display: none;
+}
+
+.right-area-footer-links a,
+.left-area-footer-links a {
+    position: relative;
+}
+
+.left-area-footer a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+
+    transform: scaleX(.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.right-area-footer-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+
+    transform: scaleX(.1);
+    transform-origin: left;
+    transition: transform 250ms ease-in-out;
+}
+
+.right-area-footer-links a:hover::after,
+.left-area-footer-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/************************ ANPASSUNGEN *************************/
+
+@media only screen and (max-width: 900px) {
+.zimmer-area-text-2::before {
+    visibility: hidden;
+}
+
+#zimmer {
+    height: 2600px;
+}
+
+footer {
+    height: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: none;
+}
+
+.footer-mobile {
+    display: block;
+}
+
+.footer-mobile-top {
+    padding: 10% 0% 0% 0%;
+}
+
+.footer-mobile-button h3{
+    font-size: 5vh;
+    color: #cf9a68;
+}
+
+.footer-mobile-button button {
+    width: 100%;
+    border: 1px solid black;
+    font-size: 22px;
+    padding: 5%;
+    margin: 10% 0%;
+}
+
+footer a {
+    width: 100%;
+}
+
+.footer-mobile-button {
+    padding: 0% 2%;
+}
+
+.footer-mobile-links li{
+    padding: 5% 0%;
+}
+
+.right-area-footer-2, .left-area-footer-2 {
+    margin: 0;
+}
+
+}
+
+@media only screen and (max-width: 650px) {
+    footer {
+        height: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footer-container {
+        display: none;
+    }
+    
+    .footer-mobile {
+        display: block;
+    }
+    
+    .footer-mobile-top {
+        padding: 10% 0% 0% 0%;
+    }
+    
+    .footer-mobile-button h3{
+        font-size: 5vh;
+        color: #cf9a68;
+    }
+    
+    .footer-mobile-button button {
+        width: 100%;
+        border: 1px solid black;
+        font-size: 22px;
+        padding: 5%;
+        margin: 20% 0%;
+    }
+    
+    footer a {
+        width: 100%;
+    }
+    
+    .footer-mobile-button {
+        padding: 0% 2%;
+    }
+    
+    .footer-mobile-links li{
+        padding: 5% 0%;
+    }
+    
+    .right-area-footer-2, .left-area-footer-2 {
+        margin: 0;
+    }
+    
+    }
+
+@media only screen and (max-width: 460px) {
+    #zimmer {
+        height: 2800px;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    #zimmer {
+        height: 3000px;
+    }
 }
