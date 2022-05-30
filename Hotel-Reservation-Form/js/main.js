@@ -40,7 +40,7 @@ jQuery( document ).ready(function( $ ) {
 	$('#date-from, #date-to', form).dateTimePicker({
 		paging: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
 		picker: ['date'],
-		format: 'd/m/Y',
+		format: 'm/d/Y',
 		filter: function(date){
 			// Select date in the future
 			var d = new Date();

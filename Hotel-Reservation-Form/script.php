@@ -1,15 +1,16 @@
 <?php
+/**
+ * Hotel reservation submit
+ */
 
-
-define('_EMAIL_TO', 'and.re@hotmail.de');
-define('_EMAIL_SUBJECT', 'Hotel Reservation Form'); 
+define('_EMAIL_TO', 'and.re@hotmail.de'); // your email address where reservation details will be received
+define('_EMAIL_SUBJECT', 'Du hast eine Buchung erhalten!'); // email message subject
 define('_EMAIL_FROM', $_POST["email"]);
 
 $fields = array(
 	array('name' => 'date-from', 'title' => 'From', 'valid' => array('require'), 'err_message' => ''),
 	array('name' => 'date-to', 'title' => 'To', 'valid' => array('require')),
 	array('name' => 'room-type', 'title' => 'Room', 'valid' => array('require')),
-	array('name' => 'room-requirements', 'title' => 'Room requirements'),
 	array('name' => 'adults', 'title' => 'Adults', 'valid' => array('require')),
 	array('name' => 'children', 'title' => 'Children', 'valid' => array('require')),
 	array('name' => 'name', 'title' => 'Name', 'valid' => array('require')),
@@ -37,7 +38,7 @@ foreach ($fields AS $field){
 					$is_valid = $is_valid && preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $value);
 					$err_message = 'Email required';
 					break;
-				default:				
+				default:
 					break;
 			}
 		}
@@ -52,8 +53,8 @@ foreach ($fields AS $field){
 
 if (empty($error_fields)){
 	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers = "From: "._EMAIL_FROM."\r\n"; 
-	$headers .= "Reply-To: "._EMAIL_FROM."\r\n"; 	
+	$headers = "From: "._EMAIL_FROM."\r\n";
+	$headers .= "Reply-To: "._EMAIL_FROM."\r\n";
 	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 	// Send email
 	mail (_EMAIL_TO, _EMAIL_SUBJECT, implode('<hr>', $email_content), $headers);
@@ -61,4 +62,3 @@ if (empty($error_fields)){
 }else{
 	echo json_encode(array('code' => 'failed', 'fields' => $error_fields));
 }
-

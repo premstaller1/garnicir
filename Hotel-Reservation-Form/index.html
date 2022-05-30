@@ -1,15 +1,15 @@
 <!DOCTYPE html>
- <html class="no-js">
+<html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Hotel Reservation Form</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/Kontakt/css_kontakt/css/normalize.css">
-        <link rel="stylesheet" href="/Kontakt/css_kontakt/css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFR7X6KBXY"></script>
@@ -31,6 +31,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <!-- Add your site or application content here -->
         <form id="booking-form" class="booking-form" name="form1" method="post" action="">
             <a href="/index.html">
@@ -38,7 +39,7 @@
                     <i class="fas fa-home"></i>
                 </div>
             </a>
-            <div><img class="logo" src="img/logo-1.png" title="Example Logo" alt="Example Logo"></div>
+            <div><img class="logo" src="../Hotel-Reservation-Form/img/logo-1.png" title="Example Logo" alt="Example Logo"></div>
             <div class="h1">We are excited to meet you!</div>
             <div id="form-message" class="message hide">
                 Thank you for your enquiry!
@@ -64,10 +65,11 @@
                         <select id="room-type" name="room-type" class="form-control">
                             <option value="Single room">Single room</option>
                             <option value="Double room">Double room</option>
-                            <option value="Apartment">Special Room</option>
+                            <option value="Special room">Special Room</option>
                         </select>
                     </div>
                 </div>
+
                 <div class="group">
                     <label for="adults">Adults</label>
                     <div>
@@ -81,7 +83,7 @@
                             <option value="7">7</option>
                             <option value="8">8</option>
                             <option value="9">9</option>
-                            <option value="10+">More than 9 People <strong><italic>(please include exact number in the message field below)</italic></strong></option>
+                            <option value="9+">More than 9 People (please include exact number in the message field below)</option>
                         </select>
                     </div>
                 </div>
@@ -93,7 +95,8 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="4+">More than 3 People <strong><italic>(please include exact number in the message field below)</italic></strong></option>
+                            <option value="4">4</option>
+                            <option value="4+">More than 3 People (please include exact number in the message field below)</option>
                         </select>
                     </div>
                 </div>
@@ -120,6 +123,7 @@
             </div>
             <div id="form-loading" class="hide"><i class="fa fa-circle-o-notch fa-spin"></i></div>
         </form>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
