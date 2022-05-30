@@ -652,6 +652,7 @@ header {
     animation-iteration-count: infinite;
     color: black;
 }
+
 .item-1{
     animation-name: anim-1;
     padding: 10% 7%;
