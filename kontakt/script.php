@@ -52,10 +52,11 @@ foreach ($fields AS $field){
 }
 
 if (empty($error_fields)){
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers = "From: "._EMAIL_FROM."\r\n";
-	$headers .= "Reply-To: "._EMAIL_FROM."\r\n";
-	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+	$headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+    $headers .= "From: and.re@hotmailde" . "\r\n" .
+    "Reply-To: and.re@hotmail.de" . "\r\n" .
+    "X-Mailer: PHP/" . phpversion();;
 	// Send email
 	mail (_EMAIL_TO, _EMAIL_SUBJECT, implode('<hr>', $email_content), $headers);
 	echo (json_encode(array('code' => 'success')));
