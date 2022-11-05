@@ -3,11 +3,9 @@
  * Hotel reservation submit
  */
 
-define('_EMAIL_TO', 'and.re@hotmail.de'); // your email address where reservation details will be received
+define('_EMAIL_TO', 'info@garni-cir.com'); // your email address where reservation details will be received
 define('_EMAIL_SUBJECT', 'Du hast eine Buchung erhalten!'); // email message subject
 define('_EMAIL_FROM', $_POST["email"]);
-
-$message = "Hallo! Freut uns sehr, dass Sie sich für ein Aufenthalt im Garni Cir interessieren.";
 
 $fields = array(
 	array('name' => 'date-from', 'title' => 'From', 'valid' => array('require'), 'err_message' => ''),
@@ -56,8 +54,8 @@ foreach ($fields AS $field){
 if (empty($error_fields)){
 	$headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-    $headers .= "From: and.re@hotmailde" . "\r\n" .
-    "Reply-To: and.re@hotmail.de" . "\r\n" .
+    $headers .= "From:" . $_POST["email"] . "\r\n" .
+    "Reply-To:" . $_POST["email"] . "\r\n" .
     "X-Mailer: PHP/" . phpversion();;
 	// Send email
 	mail (_EMAIL_TO, _EMAIL_SUBJECT, implode('<hr>', $email_content), $headers);
