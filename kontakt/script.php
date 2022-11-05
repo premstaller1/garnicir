@@ -4,7 +4,7 @@
  */
 
 define('_EMAIL_TO', 'info@garni-cir.com'); // your email address where reservation details will be received
-define('_EMAIL_SUBJECT', 'Du hast eine Buchung erhalten!'); // email message subject
+define('_EMAIL_SUBJECT', 'Garni Cir - Ihre Anfrage!'); // email message subject
 define('_EMAIL_FROM', $_POST["email"]);
 
 $fields = array(
