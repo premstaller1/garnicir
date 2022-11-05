@@ -7,6 +7,8 @@ define('_EMAIL_TO', 'and.re@hotmail.de'); // your email address where reservatio
 define('_EMAIL_SUBJECT', 'Du hast eine Buchung erhalten!'); // email message subject
 define('_EMAIL_FROM', $_POST["email"]);
 
+$message = "Hallo! Freut uns sehr, dass Sie sich für ein Aufenthalt im Garni Cir interessieren.";
+
 $fields = array(
 	array('name' => 'date-from', 'title' => 'From', 'valid' => array('require'), 'err_message' => ''),
 	array('name' => 'date-to', 'title' => 'To', 'valid' => array('require')),
