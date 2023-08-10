@@ -168,7 +168,7 @@ body {
 
     background-color: #ddd2d2;
 
-    background-image: url(/Ressourcen/background-2.jpg);
+    background-image: url(/Ressourcen/background-2.webp);
 
     background-position: center;
 
@@ -552,7 +552,7 @@ header {
 
     max-height:100%;
 
-    background-image: url(/Ressourcen/single-room.jpg);
+    background-image: url(/Ressourcen/single-room.webp);
 
     width: auto;
 
@@ -722,7 +722,7 @@ header {
 
     max-height:100%;
 
-    background-image: url(/Ressourcen/double-room.jpg);
+    background-image: url(/Ressourcen/double-room.webp);
 
     width: auto;
 
@@ -764,7 +764,7 @@ header {
 
     max-height:100%;
 
-    background-image: url(/Ressourcen/special-room.jpg);
+    background-image: url(/Ressourcen/special-room.webp);
 
     width: auto;
 
