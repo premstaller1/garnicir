@@ -784,51 +784,80 @@ header {
 
 }
 
-
-/************************* Price Table Bereich *************************************/
+/****************************************** Preise Bereich *********************/
 
 .price-table-area {
     background-color: #f7f7f7;
     padding: 5% 14% 5%;
     text-align: justify;
+    font-size: 16px;
+    display: none;
 }
 
+/* Styles for the price table container */
 .price-table-container {
     margin: 0 auto;
     border-top: 2px solid rgba(0, 0, 0, 0.56);
-    padding-top: 10%;
+    padding: 5% 0%;
     position: relative;
 }
 
-.price-table-container h3 {
-    font-size: 3rem;
+.price-table-container-2 {
+    margin: 0 auto;
+    border-top: 2px solid rgba(0, 0, 0, 0.56);
+    padding: 5% 0% 0% 0%;
+    position: relative;
+}
+
+.price-table-area h3 {
+    font-size: 2.3rem;
     text-align: center;
     padding-bottom: 5%;
 }
 
+/* Styles for the individual tables */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2%;
+}
+
 .price-table-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3% 0;
+    display: table-row;
+    text-align: center;
     font-size: 18px;
+}
+
+.price-table-row td {
+    padding: 10px;
 }
 
 .room-type {
     margin-bottom: 1%;
+    width: 25%;
 }
 
 .price {
     font-weight: bold;
     color: #cf9a68;
+    width: 25%;
 }
 
+/* Media queries for responsive design */
 @media only screen and (max-width: 960px) {
     .price-table-area {
         padding: 5% 5% 10%;
     }
     .price-table-row {
         margin: 8% 0%;
+    }
+
+    .price-table-container {
+        padding-top: 10%;
+    }
+
+    .price-table-container-2 {
+        padding-top: 10%;
     }
 }
 
@@ -837,13 +866,11 @@ header {
         padding: 15% 5% 10%;
     }
 
-    .price-table-container h3 {
+    .price-table-area h3 {
         padding-top: 5%;
         padding-bottom: 5%;
-        font-size: 1.8rem;
     }
 }
-
 
 /*********************************Bedingungen Bereich**************************************/
 /************** Zimmer-1 Bereich *********************/
