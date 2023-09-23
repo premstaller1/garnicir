@@ -532,7 +532,11 @@ input[readonly].datetime-picker {
   box-sizing: border-box;
 }
 body {
+<<<<<<< HEAD
   background: #333333 url(../../Ressourcen/background.webp) no-repeat center bottom fixed;
+=======
+  background: #333333 url(/Ressourcen/background.jpg) no-repeat center bottom fixed;
+>>>>>>> parent of 9db1dd3 (added some details regarding image format)
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
