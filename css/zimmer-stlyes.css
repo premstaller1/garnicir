@@ -788,6 +788,7 @@ header {
 /************************* Price Table Bereich *************************************/
 
 .price-table-area {
+    display: none;
     background-color: #f7f7f7;
     padding: 5% 14% 5%;
     text-align: justify;
@@ -806,21 +807,30 @@ header {
     padding-bottom: 5%;
 }
 
+.price-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
 .price-table-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3% 0;
+    display: table-row;
+    text-align: center;
     font-size: 18px;
+}
+
+.price-table-row td {
+    padding: 10px;
 }
 
 .room-type {
     margin-bottom: 1%;
+    width: 50%;
 }
 
 .price {
     font-weight: bold;
     color: #cf9a68;
+    width: 50%;
 }
 
 @media only screen and (max-width: 960px) {
